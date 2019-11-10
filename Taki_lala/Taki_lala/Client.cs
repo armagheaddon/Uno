@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using Newtonsoft.Json;
 
 namespace Taki_lala
 {
@@ -37,20 +38,25 @@ namespace Taki_lala
             }
         }
 
-        public string Receive()
+        public Dictionary<string, dynamic> Receive()
         {
-            // Receive from the server.  
+            // Receive the game's state from the server.  
             int bytesRec = client.Receive(bytes);
-            return Encoding.ASCII.GetString(bytes, 0, bytesRec);
+            string received = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+            return JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(received);
         }
 
-        public void Send(string str)
+        public void Send(Card card, string order)
         {
+            Dictionary<string, string> turnDict = new Dictionary<string, string>();
+            turnDict.Add("order", order);
+            turnDict.Add("card", card.ToJson());
+
             // Encode the data string into a byte array.  
-            byte[] msg = Encoding.ASCII.GetBytes(str);
+            byte[] msg = Encoding.ASCII.GetBytes(JsonConvert.SerializeObject(turnDict));
 
             // Send the data through the socket.  
-            int bytesSent = client.Send(msg);
+            client.Send(msg);
         }
 
         public void CloseSocket()
