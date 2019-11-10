@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Taki_lala
 {
     static class Program
@@ -11,8 +12,14 @@ namespace Taki_lala
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+   
+        static void Main(string[] args)
+        {
+
+        }
+
         [STAThread]
-        static void Main()
+        public static void RunGraphics()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
