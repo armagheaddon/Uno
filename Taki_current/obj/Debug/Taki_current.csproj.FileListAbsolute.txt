@@ -1,0 +1,9 @@
+C:\Users\Noam\source\repos\Taki_current\Taki_current\bin\Debug\Taki_current.exe.config
+C:\Users\Noam\source\repos\Taki_current\Taki_current\bin\Debug\Taki_current.exe
+C:\Users\Noam\source\repos\Taki_current\Taki_current\bin\Debug\Taki_current.pdb
+C:\Users\Noam\source\repos\Taki_current\Taki_current\obj\Debug\Taki_current.csprojAssemblyReference.cache
+C:\Users\Noam\source\repos\Taki_current\Taki_current\obj\Debug\Taki_current.Form1.resources
+C:\Users\Noam\source\repos\Taki_current\Taki_current\obj\Debug\Taki_current.Properties.Resources.resources
+C:\Users\Noam\source\repos\Taki_current\Taki_current\obj\Debug\Taki_current.csproj.GenerateResource.cache
+C:\Users\Noam\source\repos\Taki_current\Taki_current\obj\Debug\Taki_current.exe
+C:\Users\Noam\source\repos\Taki_current\Taki_current\obj\Debug\Taki_current.pdb
