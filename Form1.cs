@@ -48,7 +48,6 @@ namespace Taki_current
             pictures[25] = takired;
             pictures[26] = stopred;
             pictures[27] = chadirred;
-
             pictures[28] = oneyellow;
             pictures[29] = twoyellow;
             pictures[30] = fouryellow;
@@ -80,54 +79,110 @@ namespace Taki_current
             pictures[56] = chacol;
             pictures[57] = taki;
 
+               //check if u can print all cards
+            for (int h = 0; h < pictures.Length; h++)
+                this.Controls.Add(pictures[h]);
 
 
-
+            /*
             for (int i = 0; i < game.Length; i++)
             {
                 for (int h = 0; h < pictures.Length; h++)
                 {
                     this.Controls.Remove(pictures[h]);
                 }
-                Dictionary<string, string> openWith = new Dictionary<string, string>();
-                hand = game[i][6];
-                int x_start = 550 - 77 * hand.Length / 2;
+
+                Dictionary<string, string> pileC = new Dictionary<string, string>();
+                List<KeyValuePair<string, string >> hand = new List<KeyValuePair<string, string>>(); //  guess it works
+
+                // pile card
+                pileC = game[i][0];
+                var c = pileC.First();
+                string cur_pile = c.Value + c.Key;
+
+                //the turn dir
+                int turn_dir = game[i]["turn dir"];
+
+                //others cards
+                int[] others = new int[3];
+                others = game[i]["others"];
+                first_player.Text = others[0].ToString();
+                second_player.Text = others[1].ToString();
+                third_player.Text = others[2].ToString();
+                if(turn_dir==1){
+                    this.Controls.Remove(right);
+                    this.Controls.Add(left);
+                    }
+                if(turn_dir==-1){
+                    this.Controls.Remove(left);
+                    this.Controls.Add(right);
+                    }
+                    
+                
+
+                // our cards
+                OurHand = game[i]["hand"];
+               
+
+
+                //550- the middle of the x lenght, 610- almost in the botttom of the screen
+                // we are taking from the middle few steps backwards in order to have half of the cards before the middle 
+                // and the other half after....
+
+                int hand_len = hand.Length;
+                int x_start = 550 - 100 * hand_len / 2;
                 int x = x_start;
                 int y_start = 610;
 
-                for ( int j = 0; j < hand.Length; j++)
+                for ( int j = 0; j < hand_len; j++)
                 {
-                    if (j == 10)
+                    if (j == 9)
                     {
-                        x_start = 550 - 77 * hand.Length / 2;
-                        y_start = y_start - 100;
+                        x_start = 550 - 100 * hand_len / 2;
+                        y_start = y_start - 170;
                     }
                     
-                    var item = hand[j].First();
+                    var item = OurHand[j].First();
                     string value = item.Key;//value
                     string key = item.Value;//color
-                    string pic = value + key;
+                    //matching strings
+
+                    string pic = value + key;/// needed to asjust to our words...
                     int counter = 0;
-                    x = x + 77 * j;
+                    x = x + 110 * j;
 
 
 
                     for (int k = 0; k < pictures.Length; k++)
-                    {     
+                    {   
+                        
+                            // finding the needed picture
                             if (pic== pictures[k].Name)
-                        {
+                            {
+                                pictures[k].Location = new System.Drawing.Point(x, y_start);
+                                this.Controls.Add(pictures[k]);
+                            }
 
-                            pictures[k].Location = new System.Drawing.Point(x, y_start);
-                            this.Controls.Add(pictures[k]);
-                        }
+                            //pile card
+                            if (cur_pile == pictures[k].Name)
+                            {
+                                pictures[k].Location = new System.Drawing.Point(83, 31);
+                                this.Controls.Add(pictures[k]);
+                            }
                     }
                     
                 }
 
             }
-            
+          */
         }
 
+
+
         public object hand { get; }
-    }
+
+   
+     }
 }
+
+
