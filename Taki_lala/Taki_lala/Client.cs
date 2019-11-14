@@ -24,16 +24,20 @@ namespace Taki_lala
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, 11000); // Server address
 
                 // Create a TCP/IP  socket.  
-                this.client = new Socket(SocketType.Stream, ProtocolType.Tcp);
+                client = new Socket(SocketType.Stream, ProtocolType.Tcp);
 
                 // Connect the socket to the remote endpoint. Catch any errors.  
                 client.Connect(remoteEP);
                 Console.WriteLine("Socket connected to {0}", client.RemoteEndPoint.ToString());
                 Console.WriteLine("Sending password");
-
                 string password = "1234";
                 Send(password);
-                //TODO: add receive.
+                if (ReceiveToString() == "Login Successful")
+                {
+                    int ID = ReceiveID();
+                }
+                else
+                    throw new System.ArgumentException("Incorrect Password");
             }
             catch (Exception e)
             {
@@ -42,7 +46,17 @@ namespace Taki_lala
                 Environment.Exit(0);
             }
         }
-
+        public int ReceiveID()
+        {
+            string data = ReceiveToString();
+            return data[data.Length - 1];
+        }
+        public string ReceiveToString()
+        {
+            int bytesRec = client.Receive(bytes);
+            string received = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+            return received;
+        }
         public Dictionary<string, dynamic> Receive()
         {
             // Receive the game's state from the server.  

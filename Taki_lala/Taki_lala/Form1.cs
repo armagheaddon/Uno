@@ -14,6 +14,7 @@ namespace Taki_lala
     {
         public Form1()
         {
+            /*
             InitializeComponent();
             Console.WriteLine(onered.Name);
             Console.WriteLine(threered.Name);
@@ -159,7 +160,7 @@ namespace Taki_lala
                 }
 
             }
-            
+            */
         }
 
         public object hand { get; }

@@ -19,3 +19,29 @@ C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\obj\Debu
 C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csproj.CopyComplete
 C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.exe
 C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.pdb
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Taki_lala.exe.config
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Taki_lala.exe
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Taki_lala.pdb
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csprojAssemblyReference.cache
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.Form1.resources
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.Properties.Resources.resources
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csproj.GenerateResource.cache
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csproj.CopyComplete
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.exe
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.pdb
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.dll
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.Modules.dll
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.SQLite.dll
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.Wpf.dll
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.dll
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.xml
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.Modules.xml
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.SQLite.xml
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.Wpf.xml
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.xml
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.Metadata.xml
