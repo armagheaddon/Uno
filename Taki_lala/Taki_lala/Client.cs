@@ -66,8 +66,13 @@ namespace Taki_lala
             while (client.Connected)
             {
                 data = ReceiveToString();
-                TakeAPart(data);
+                if (data == "")
+                    break;
+                else
+                    TakeAPart(data);
             }
+            incoming.Enqueue(null);
+            CloseSocket();
         }
 
         public void TakeAPart(string newmsg)
@@ -96,9 +101,16 @@ namespace Taki_lala
 
         public string ReceiveToString()
         {
-            int bytesRec = client.Receive(bytes);
-            string received = Encoding.ASCII.GetString(bytes, 0, bytesRec);
-            return received;
+            try
+            {
+                int bytesRec = client.Receive(bytes);
+                string received = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                return received;
+            }
+            catch (Exception e)
+            {
+                return "";
+            }
         }
 
         public Dictionary<string, dynamic> Receive()
@@ -118,11 +130,11 @@ namespace Taki_lala
             client.Send(msg);
         }
 
-        public void Send(Card card, string order)
+        public void Send(Dictionary<string, dynamic> card, string order)
         {
             Dictionary<string, string> turnDict = new Dictionary<string, string>();
             turnDict.Add("order", order);
-            turnDict.Add("card", card.ToJson());
+            turnDict.Add("card", JsonConvert.SerializeObject(card));
 
             // Encode the data string into a byte array.  
             byte[] msg = Encoding.ASCII.GetBytes(JsonConvert.SerializeObject(turnDict));

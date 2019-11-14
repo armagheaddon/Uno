@@ -12,7 +12,7 @@ namespace Taki_lala
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1(dynamic history)
         {
             InitializeComponent();
             Console.WriteLine(onered.Name);
@@ -82,7 +82,7 @@ namespace Taki_lala
             //check if u can print all cards
             //for (int h = 0; h < pictures.Length; h++)
             //    this.Controls.Add(pictures[h]);
-
+            /*
             List<Dictionary<string, dynamic>> game = new List<Dictionary<string, dynamic>>();
             Dictionary<string, dynamic> dict1 = new Dictionary<string, dynamic>();
             dict1.Add("one", "red");
@@ -137,10 +137,10 @@ namespace Taki_lala
             };
 
             game.Add(dict);
+            */
 
 
-
-            foreach (Dictionary<string, dynamic> turn in game)
+            foreach (Dictionary<string, dynamic> turn in history)
             {
                 for (int h = 0; h < pictures.Length; h++)
                 {

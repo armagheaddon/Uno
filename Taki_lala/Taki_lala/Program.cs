@@ -13,15 +13,7 @@ namespace Taki_lala
         /// </summary>
         static void Main(string[] args)
         {
-            Client client = new Client();
-        }
-
-        [STAThread]
-        public static void RunGraphics()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Game game = new Game();
         }
     }
 }
