@@ -29,6 +29,11 @@ namespace Taki_lala
                 // Connect the socket to the remote endpoint. Catch any errors.  
                 client.Connect(remoteEP);
                 Console.WriteLine("Socket connected to {0}", client.RemoteEndPoint.ToString());
+                Console.WriteLine("Sending password");
+
+                string password = "1234";
+                Send(password);
+                //TODO: add receive.
             }
             catch (Exception e)
             {
@@ -44,6 +49,15 @@ namespace Taki_lala
             int bytesRec = client.Receive(bytes);
             string received = Encoding.ASCII.GetString(bytes, 0, bytesRec);
             return JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(received);
+        }
+
+        public void Send(string str)
+        {
+            // Encode the data string into a byte array.  
+            byte[] msg = Encoding.ASCII.GetBytes(str);
+
+            // Send the data through the socket.  
+            client.Send(msg);
         }
 
         public void Send(Card card, string order)
