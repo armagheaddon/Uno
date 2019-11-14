@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using Newtonsoft.Json;
+using System.Threading;
 
 namespace Taki_lala
 {
@@ -14,7 +15,8 @@ namespace Taki_lala
 
         private Socket client;
         private byte[] bytes = new byte[1024];  // Data buffer for incoming data. 
-        private Queue<Dictionary<string, dynamic>> msg = new Queue<Dictionary<string, dynamic>>();
+        private Queue<Dictionary<string, dynamic>> incoming = new Queue<Dictionary<string, dynamic>>();
+        private Thread receiveLoop;
         public Client()
         {
             try
@@ -29,18 +31,17 @@ namespace Taki_lala
                 // Connect the socket to the remote endpoint. Catch any errors.  
                 client.Connect(remoteEP);
                 Console.WriteLine("Socket connected to {0}", client.RemoteEndPoint.ToString());
+                receiveLoop = new Thread(new ThreadStart(ReceiveLoop));
+
                 Console.WriteLine("Sending password");
                 string password = "1234";
                 Send(password);
-                var data = Receive();
-                if (data["command"] == "Login Successful")
+
+                var data = GetIncoming();
+                if (data["command"] != "Login Successful")
                 {
-                    int ID = ReceiveID();
-                    Console.WriteLine("our id is"+ ID);
+                    throw new System.ArgumentException("Incorrect Password " + data);
                 }
-                else
-                    throw new System.ArgumentException("Incorrect Password "+data);
-                //TODO: add receive.
             }
             catch (Exception e)
             {
@@ -50,24 +51,56 @@ namespace Taki_lala
             }
         }
 
-        public void TakeAPart (string newmsg)
+        public Dictionary<string, dynamic> GetIncoming()
         {
-            int length = (int)newmsg[0] * 1000 + (int)newmsg[1] * 100 + (int)newmsg[2] * 10 + (int)newmsg[3] - 1;
-            newmsg.Substring(0, length);
+            while(incoming.Count() == 0)
+            {
+                DoNothing();
+            }
+            return incoming.Dequeue();
         }
+
+        public void ReceiveLoop()
+        {
+            string data;
+            while (client.Connected)
+            {
+                data = ReceiveToString();
+                TakeAPart(data);
+            }
+        }
+
+        public void TakeAPart(string newmsg)
+        {
+            int length;
+            string single;
+            Dictionary<string, dynamic> dict;
+            while (newmsg != "")
+            {
+                Console.WriteLine(newmsg.Substring(0, 4));
+                length = int.Parse(newmsg.Substring(0, 4));
+                single = newmsg.Substring(4, length);
+                Console.WriteLine(single);
+                dict = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(single);
+                incoming.Enqueue(dict);
+                newmsg = newmsg.Substring(length + 4);
+            }
+        }
+
         public int ReceiveID()
         {
-            Dictionary<string, dynamic> data = Receive();
-            Console.WriteLine(data);
+            Dictionary<string, dynamic> data = GetIncoming();
             string stringdata = data["command"];
             return stringdata[stringdata.Length - 1];
         }
+
         public string ReceiveToString()
         {
             int bytesRec = client.Receive(bytes);
             string received = Encoding.ASCII.GetString(bytes, 0, bytesRec);
             return received;
         }
+
         public Dictionary<string, dynamic> Receive()
         {
             // Receive the game's state from the server.  
@@ -103,6 +136,11 @@ namespace Taki_lala
             // Release the socket.  
             client.Shutdown(SocketShutdown.Both);
             client.Close();
+        }
+
+        public void DoNothing()
+        {
+
         }
     }
 }
