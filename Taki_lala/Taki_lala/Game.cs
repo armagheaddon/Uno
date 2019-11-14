@@ -21,9 +21,13 @@ namespace Taki_lala
 
         private int ID;
         private List<Dictionary<string, dynamic>> history;
-        public Game (int ID)
+        private Client client;
+        public Game ()
         {
-            this.ID = ID;
+            client = new Client();
+            this.ID = client.ReceiveID();
+            Console.WriteLine("our id is" + ID);
+
             this.history = new List<Dictionary<string, dynamic>>();
 
             client = new Client();

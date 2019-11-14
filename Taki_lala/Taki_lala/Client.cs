@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using Newtonsoft.Json;
+using System.Threading;
 
 namespace Taki_lala
 {
@@ -14,14 +15,15 @@ namespace Taki_lala
 
         private Socket client;
         private byte[] bytes = new byte[1024];  // Data buffer for incoming data. 
-
+        private Queue<Dictionary<string, dynamic>> incoming = new Queue<Dictionary<string, dynamic>>();
+        private Thread receiveLoop;
         public Client()
         {
             try
             {
                 // Establish the remote endpoint for the socket.  
-                IPAddress ipAddress = IPAddress.Parse("0.0.0.0");       // Server IP
-                IPEndPoint remoteEP = new IPEndPoint(ipAddress, 11000); // Server address
+                IPAddress ipAddress = IPAddress.Parse("192.168.1.146");       // Server IP
+                IPEndPoint remoteEP = new IPEndPoint(ipAddress, 50000); // Server address
 
                 // Create a TCP/IP  socket.  
                 client = new Socket(SocketType.Stream, ProtocolType.Tcp);
@@ -29,34 +31,76 @@ namespace Taki_lala
                 // Connect the socket to the remote endpoint. Catch any errors.  
                 client.Connect(remoteEP);
                 Console.WriteLine("Socket connected to {0}", client.RemoteEndPoint.ToString());
+                receiveLoop = new Thread(new ThreadStart(ReceiveLoop));
+
                 Console.WriteLine("Sending password");
                 string password = "1234";
                 Send(password);
-                if (ReceiveToString() == "Login Successful")
+
+                var data = GetIncoming();
+                if (data["command"] != "Login Successful")
                 {
-                    int ID = ReceiveID();
+                    throw new System.ArgumentException("Incorrect Password " + data);
                 }
-                else
-                    throw new System.ArgumentException("Incorrect Password");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
                 CloseSocket();
-                Environment.Exit(0);
+                Environment.Exit(-1);
             }
         }
+
+        public Dictionary<string, dynamic> GetIncoming()
+        {
+            while(incoming.Count() == 0)
+            {
+                DoNothing();
+            }
+            return incoming.Dequeue();
+        }
+
+        public void ReceiveLoop()
+        {
+            string data;
+            while (client.Connected)
+            {
+                data = ReceiveToString();
+                TakeAPart(data);
+            }
+        }
+
+        public void TakeAPart(string newmsg)
+        {
+            int length;
+            string single;
+            Dictionary<string, dynamic> dict;
+            while (newmsg != "")
+            {
+                Console.WriteLine(newmsg.Substring(0, 4));
+                length = int.Parse(newmsg.Substring(0, 4));
+                single = newmsg.Substring(4, length);
+                Console.WriteLine(single);
+                dict = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(single);
+                incoming.Enqueue(dict);
+                newmsg = newmsg.Substring(length + 4);
+            }
+        }
+
         public int ReceiveID()
         {
-            string data = ReceiveToString();
-            return data[data.Length - 1];
+            Dictionary<string, dynamic> data = GetIncoming();
+            string stringdata = data["command"];
+            return stringdata[stringdata.Length - 1];
         }
+
         public string ReceiveToString()
         {
             int bytesRec = client.Receive(bytes);
             string received = Encoding.ASCII.GetString(bytes, 0, bytesRec);
             return received;
         }
+
         public Dictionary<string, dynamic> Receive()
         {
             // Receive the game's state from the server.  
@@ -92,6 +136,11 @@ namespace Taki_lala
             // Release the socket.  
             client.Shutdown(SocketShutdown.Both);
             client.Close();
+        }
+
+        public void DoNothing()
+        {
+
         }
     }
 }
