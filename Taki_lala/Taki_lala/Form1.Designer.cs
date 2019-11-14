@@ -28,705 +28,777 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.onered = new System.Windows.Forms.PictureBox();
+            this.twored = new System.Windows.Forms.PictureBox();
+            this.threered = new System.Windows.Forms.PictureBox();
+            this.fourred = new System.Windows.Forms.PictureBox();
+            this.fivered = new System.Windows.Forms.PictureBox();
+            this.sixred = new System.Windows.Forms.PictureBox();
+            this.sevenred = new System.Windows.Forms.PictureBox();
+            this.eightred = new System.Windows.Forms.PictureBox();
+            this.ninered = new System.Windows.Forms.PictureBox();
+            this.plusred = new System.Windows.Forms.PictureBox();
+            this.plustwored = new System.Windows.Forms.PictureBox();
+            this.takired = new System.Windows.Forms.PictureBox();
+            this.stopred = new System.Windows.Forms.PictureBox();
+            this.chadirred = new System.Windows.Forms.PictureBox();
+            this.oneblue = new System.Windows.Forms.PictureBox();
+            this.twoblue = new System.Windows.Forms.PictureBox();
+            this.threeblue = new System.Windows.Forms.PictureBox();
+            this.fourblue = new System.Windows.Forms.PictureBox();
+            this.fiveblue = new System.Windows.Forms.PictureBox();
+            this.sixblue = new System.Windows.Forms.PictureBox();
+            this.sevenblue = new System.Windows.Forms.PictureBox();
+            this.eightblue = new System.Windows.Forms.PictureBox();
+            this.nineblue = new System.Windows.Forms.PictureBox();
+            this.plusblue = new System.Windows.Forms.PictureBox();
+            this.plustwoblue = new System.Windows.Forms.PictureBox();
+            this.takiblue = new System.Windows.Forms.PictureBox();
+            this.chdirblue = new System.Windows.Forms.PictureBox();
+            this.oneyellow = new System.Windows.Forms.PictureBox();
+            this.twoyellow = new System.Windows.Forms.PictureBox();
+            this.fouryellow = new System.Windows.Forms.PictureBox();
+            this.threeyellow = new System.Windows.Forms.PictureBox();
+            this.chadiryellow = new System.Windows.Forms.PictureBox();
+            this.stopyellow = new System.Windows.Forms.PictureBox();
+            this.onegreen = new System.Windows.Forms.PictureBox();
+            this.twogreen = new System.Windows.Forms.PictureBox();
+            this.threegreen = new System.Windows.Forms.PictureBox();
+            this.fourgreen = new System.Windows.Forms.PictureBox();
+            this.stopblue = new System.Windows.Forms.PictureBox();
+            this.fiveyellow = new System.Windows.Forms.PictureBox();
+            this.sixyellow = new System.Windows.Forms.PictureBox();
+            this.chadirgreen = new System.Windows.Forms.PictureBox();
+            this.plustwogreen = new System.Windows.Forms.PictureBox();
+            this.plusgreen = new System.Windows.Forms.PictureBox();
+            this.taki = new System.Windows.Forms.PictureBox();
+            this.chacol = new System.Windows.Forms.PictureBox();
+            this.takiyellow = new System.Windows.Forms.PictureBox();
+            this.fivegreen = new System.Windows.Forms.PictureBox();
+            this.sixgreen = new System.Windows.Forms.PictureBox();
+            this.sevengreen = new System.Windows.Forms.PictureBox();
+            this.eightgreen = new System.Windows.Forms.PictureBox();
+            this.ninegreen = new System.Windows.Forms.PictureBox();
+            this.stopgreen = new System.Windows.Forms.PictureBox();
+            this.takigreen = new System.Windows.Forms.PictureBox();
+            this.sevenyellow = new System.Windows.Forms.PictureBox();
+            this.eightyellow = new System.Windows.Forms.PictureBox();
+            this.nineyellow = new System.Windows.Forms.PictureBox();
+            this.plusyellow = new System.Windows.Forms.PictureBox();
+            this.plustwoyellow = new System.Windows.Forms.PictureBox();
+            this.first_player = new System.Windows.Forms.Label();
+            this.second_player = new System.Windows.Forms.Label();
+            this.third_player = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label27 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label26 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel20.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel24.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel27.SuspendLayout();
-            this.panel28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.onered)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twored)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threered)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fourred)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fivered)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sixred)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sevenred)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eightred)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ninered)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plusred)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plustwored)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.takired)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stopred)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chadirred)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oneblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twoblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threeblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fourblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fiveblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sixblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sevenblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eightblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nineblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plusblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plustwoblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.takiblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chdirblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oneyellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twoyellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fouryellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threeyellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chadiryellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stopyellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onegreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twogreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threegreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fourgreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stopblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fiveyellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sixyellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chadirgreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plustwogreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plusgreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taki)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chacol)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.takiyellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fivegreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sixgreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sevengreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eightgreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ninegreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stopgreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.takigreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sevenyellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eightyellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nineyellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plusyellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plustwoyellow)).BeginInit();
             this.SuspendLayout();
+            // 
+            // onered
+            // 
+            this.onered.Location = new System.Drawing.Point(43, 618);
+            this.onered.Name = "onered";
+            this.onered.Size = new System.Drawing.Size(100, 150);
+            this.onered.TabIndex = 0;
+            this.onered.TabStop = false;
+            // 
+            // twored
+            // 
+            this.twored.Location = new System.Drawing.Point(43, 506);
+            this.twored.Name = "twored";
+            this.twored.Size = new System.Drawing.Size(100, 50);
+            this.twored.TabIndex = 14;
+            this.twored.TabStop = false;
+            // 
+            // threered
+            // 
+            this.threered.Location = new System.Drawing.Point(790, 618);
+            this.threered.Name = "threered";
+            this.threered.Size = new System.Drawing.Size(100, 50);
+            this.threered.TabIndex = 2;
+            this.threered.TabStop = false;
+            // 
+            // fourred
+            // 
+            this.fourred.Location = new System.Drawing.Point(707, 618);
+            this.fourred.Name = "fourred";
+            this.fourred.Size = new System.Drawing.Size(100, 50);
+            this.fourred.TabIndex = 3;
+            this.fourred.TabStop = false;
+            // 
+            // fivered
+            // 
+            this.fivered.Location = new System.Drawing.Point(624, 618);
+            this.fivered.Name = "fivered";
+            this.fivered.Size = new System.Drawing.Size(100, 50);
+            this.fivered.TabIndex = 4;
+            this.fivered.TabStop = false;
+            // 
+            // sixred
+            // 
+            this.sixred.Location = new System.Drawing.Point(541, 618);
+            this.sixred.Name = "sixred";
+            this.sixred.Size = new System.Drawing.Size(100, 50);
+            this.sixred.TabIndex = 5;
+            this.sixred.TabStop = false;
+            // 
+            // sevenred
+            // 
+            this.sevenred.Location = new System.Drawing.Point(458, 618);
+            this.sevenred.Name = "sevenred";
+            this.sevenred.Size = new System.Drawing.Size(100, 50);
+            this.sevenred.TabIndex = 6;
+            this.sevenred.TabStop = false;
+            // 
+            // eightred
+            // 
+            this.eightred.Location = new System.Drawing.Point(375, 618);
+            this.eightred.Name = "eightred";
+            this.eightred.Size = new System.Drawing.Size(100, 50);
+            this.eightred.TabIndex = 7;
+            this.eightred.TabStop = false;
+            // 
+            // ninered
+            // 
+            this.ninered.Location = new System.Drawing.Point(292, 618);
+            this.ninered.Name = "ninered";
+            this.ninered.Size = new System.Drawing.Size(100, 50);
+            this.ninered.TabIndex = 8;
+            this.ninered.TabStop = false;
+            // 
+            // plusred
+            // 
+            this.plusred.Location = new System.Drawing.Point(209, 618);
+            this.plusred.Name = "plusred";
+            this.plusred.Size = new System.Drawing.Size(100, 50);
+            this.plusred.TabIndex = 9;
+            this.plusred.TabStop = false;
+            // 
+            // plustwored
+            // 
+            this.plustwored.Location = new System.Drawing.Point(126, 618);
+            this.plustwored.Name = "plustwored";
+            this.plustwored.Size = new System.Drawing.Size(100, 50);
+            this.plustwored.TabIndex = 10;
+            this.plustwored.TabStop = false;
+            // 
+            // takired
+            // 
+            this.takired.Location = new System.Drawing.Point(874, 618);
+            this.takired.Name = "takired";
+            this.takired.Size = new System.Drawing.Size(100, 50);
+            this.takired.TabIndex = 13;
+            this.takired.TabStop = false;
+            // 
+            // stopred
+            // 
+            this.stopred.Location = new System.Drawing.Point(957, 618);
+            this.stopred.Name = "stopred";
+            this.stopred.Size = new System.Drawing.Size(100, 50);
+            this.stopred.TabIndex = 12;
+            this.stopred.TabStop = false;
+            // 
+            // chadirred
+            // 
+            this.chadirred.Location = new System.Drawing.Point(1040, 618);
+            this.chadirred.Name = "chadirred";
+            this.chadirred.Size = new System.Drawing.Size(100, 50);
+            this.chadirred.TabIndex = 11;
+            this.chadirred.TabStop = false;
+            // 
+            // oneblue
+            // 
+            this.oneblue.Location = new System.Drawing.Point(957, 506);
+            this.oneblue.Name = "oneblue";
+            this.oneblue.Size = new System.Drawing.Size(100, 50);
+            this.oneblue.TabIndex = 15;
+            this.oneblue.TabStop = false;
+            // 
+            // twoblue
+            // 
+            this.twoblue.Location = new System.Drawing.Point(873, 506);
+            this.twoblue.Name = "twoblue";
+            this.twoblue.Size = new System.Drawing.Size(100, 50);
+            this.twoblue.TabIndex = 16;
+            this.twoblue.TabStop = false;
+            // 
+            // threeblue
+            // 
+            this.threeblue.Location = new System.Drawing.Point(790, 506);
+            this.threeblue.Name = "threeblue";
+            this.threeblue.Size = new System.Drawing.Size(100, 50);
+            this.threeblue.TabIndex = 17;
+            this.threeblue.TabStop = false;
+            // 
+            // fourblue
+            // 
+            this.fourblue.Location = new System.Drawing.Point(707, 506);
+            this.fourblue.Name = "fourblue";
+            this.fourblue.Size = new System.Drawing.Size(100, 50);
+            this.fourblue.TabIndex = 18;
+            this.fourblue.TabStop = false;
+            // 
+            // fiveblue
+            // 
+            this.fiveblue.Location = new System.Drawing.Point(624, 506);
+            this.fiveblue.Name = "fiveblue";
+            this.fiveblue.Size = new System.Drawing.Size(100, 50);
+            this.fiveblue.TabIndex = 19;
+            this.fiveblue.TabStop = false;
+            // 
+            // sixblue
+            // 
+            this.sixblue.Location = new System.Drawing.Point(541, 506);
+            this.sixblue.Name = "sixblue";
+            this.sixblue.Size = new System.Drawing.Size(100, 50);
+            this.sixblue.TabIndex = 20;
+            this.sixblue.TabStop = false;
+            // 
+            // sevenblue
+            // 
+            this.sevenblue.Location = new System.Drawing.Point(458, 506);
+            this.sevenblue.Name = "sevenblue";
+            this.sevenblue.Size = new System.Drawing.Size(100, 50);
+            this.sevenblue.TabIndex = 21;
+            this.sevenblue.TabStop = false;
+            // 
+            // eightblue
+            // 
+            this.eightblue.Location = new System.Drawing.Point(375, 506);
+            this.eightblue.Name = "eightblue";
+            this.eightblue.Size = new System.Drawing.Size(100, 50);
+            this.eightblue.TabIndex = 22;
+            this.eightblue.TabStop = false;
+            // 
+            // nineblue
+            // 
+            this.nineblue.Location = new System.Drawing.Point(292, 506);
+            this.nineblue.Name = "nineblue";
+            this.nineblue.Size = new System.Drawing.Size(100, 50);
+            this.nineblue.TabIndex = 23;
+            this.nineblue.TabStop = false;
+            // 
+            // plusblue
+            // 
+            this.plusblue.Location = new System.Drawing.Point(209, 506);
+            this.plusblue.Name = "plusblue";
+            this.plusblue.Size = new System.Drawing.Size(100, 50);
+            this.plusblue.TabIndex = 24;
+            this.plusblue.TabStop = false;
+            // 
+            // plustwoblue
+            // 
+            this.plustwoblue.Location = new System.Drawing.Point(126, 506);
+            this.plustwoblue.Name = "plustwoblue";
+            this.plustwoblue.Size = new System.Drawing.Size(100, 50);
+            this.plustwoblue.TabIndex = 25;
+            this.plustwoblue.TabStop = false;
+            // 
+            // takiblue
+            // 
+            this.takiblue.Location = new System.Drawing.Point(1040, 506);
+            this.takiblue.Name = "takiblue";
+            this.takiblue.Size = new System.Drawing.Size(100, 50);
+            this.takiblue.TabIndex = 26;
+            this.takiblue.TabStop = false;
+            // 
+            // chdirblue
+            // 
+            this.chdirblue.Location = new System.Drawing.Point(1040, 394);
+            this.chdirblue.Name = "chdirblue";
+            this.chdirblue.Size = new System.Drawing.Size(100, 50);
+            this.chdirblue.TabIndex = 39;
+            this.chdirblue.TabStop = false;
+            // 
+            // oneyellow
+            // 
+            this.oneyellow.Location = new System.Drawing.Point(126, 394);
+            this.oneyellow.Name = "oneyellow";
+            this.oneyellow.Size = new System.Drawing.Size(100, 50);
+            this.oneyellow.TabIndex = 38;
+            this.oneyellow.TabStop = false;
+            // 
+            // twoyellow
+            // 
+            this.twoyellow.Location = new System.Drawing.Point(209, 394);
+            this.twoyellow.Name = "twoyellow";
+            this.twoyellow.Size = new System.Drawing.Size(100, 50);
+            this.twoyellow.TabIndex = 37;
+            this.twoyellow.TabStop = false;
+            // 
+            // fouryellow
+            // 
+            this.fouryellow.Location = new System.Drawing.Point(292, 394);
+            this.fouryellow.Name = "fouryellow";
+            this.fouryellow.Size = new System.Drawing.Size(100, 50);
+            this.fouryellow.TabIndex = 36;
+            this.fouryellow.TabStop = false;
+            // 
+            // threeyellow
+            // 
+            this.threeyellow.Location = new System.Drawing.Point(375, 394);
+            this.threeyellow.Name = "threeyellow";
+            this.threeyellow.Size = new System.Drawing.Size(100, 50);
+            this.threeyellow.TabIndex = 35;
+            this.threeyellow.TabStop = false;
+            // 
+            // chadiryellow
+            // 
+            this.chadiryellow.Location = new System.Drawing.Point(458, 394);
+            this.chadiryellow.Name = "chadiryellow";
+            this.chadiryellow.Size = new System.Drawing.Size(100, 50);
+            this.chadiryellow.TabIndex = 34;
+            this.chadiryellow.TabStop = false;
+            // 
+            // stopyellow
+            // 
+            this.stopyellow.Location = new System.Drawing.Point(541, 394);
+            this.stopyellow.Name = "stopyellow";
+            this.stopyellow.Size = new System.Drawing.Size(100, 50);
+            this.stopyellow.TabIndex = 33;
+            this.stopyellow.TabStop = false;
+            // 
+            // onegreen
+            // 
+            this.onegreen.Location = new System.Drawing.Point(624, 394);
+            this.onegreen.Name = "onegreen";
+            this.onegreen.Size = new System.Drawing.Size(100, 50);
+            this.onegreen.TabIndex = 32;
+            this.onegreen.TabStop = false;
+            // 
+            // twogreen
+            // 
+            this.twogreen.Location = new System.Drawing.Point(707, 394);
+            this.twogreen.Name = "twogreen";
+            this.twogreen.Size = new System.Drawing.Size(100, 50);
+            this.twogreen.TabIndex = 31;
+            this.twogreen.TabStop = false;
+            // 
+            // threegreen
+            // 
+            this.threegreen.Location = new System.Drawing.Point(790, 394);
+            this.threegreen.Name = "threegreen";
+            this.threegreen.Size = new System.Drawing.Size(100, 50);
+            this.threegreen.TabIndex = 30;
+            this.threegreen.TabStop = false;
+            // 
+            // fourgreen
+            // 
+            this.fourgreen.Location = new System.Drawing.Point(873, 394);
+            this.fourgreen.Name = "fourgreen";
+            this.fourgreen.Size = new System.Drawing.Size(100, 50);
+            this.fourgreen.TabIndex = 29;
+            this.fourgreen.TabStop = false;
+            // 
+            // stopblue
+            // 
+            this.stopblue.Location = new System.Drawing.Point(957, 394);
+            this.stopblue.Name = "stopblue";
+            this.stopblue.Size = new System.Drawing.Size(100, 50);
+            this.stopblue.TabIndex = 28;
+            this.stopblue.TabStop = false;
+            // 
+            // fiveyellow
+            // 
+            this.fiveyellow.Location = new System.Drawing.Point(43, 394);
+            this.fiveyellow.Name = "fiveyellow";
+            this.fiveyellow.Size = new System.Drawing.Size(100, 50);
+            this.fiveyellow.TabIndex = 27;
+            this.fiveyellow.TabStop = false;
+            // 
+            // sixyellow
+            // 
+            this.sixyellow.Location = new System.Drawing.Point(43, 280);
+            this.sixyellow.Name = "sixyellow";
+            this.sixyellow.Size = new System.Drawing.Size(100, 50);
+            this.sixyellow.TabIndex = 65;
+            this.sixyellow.TabStop = false;
+            // 
+            // chadirgreen
+            // 
+            this.chadirgreen.Location = new System.Drawing.Point(126, 168);
+            this.chadirgreen.Name = "chadirgreen";
+            this.chadirgreen.Size = new System.Drawing.Size(100, 50);
+            this.chadirgreen.TabIndex = 64;
+            this.chadirgreen.TabStop = false;
+            // 
+            // plustwogreen
+            // 
+            this.plustwogreen.Location = new System.Drawing.Point(209, 168);
+            this.plustwogreen.Name = "plustwogreen";
+            this.plustwogreen.Size = new System.Drawing.Size(100, 50);
+            this.plustwogreen.TabIndex = 63;
+            this.plustwogreen.TabStop = false;
+            // 
+            // plusgreen
+            // 
+            this.plusgreen.Location = new System.Drawing.Point(292, 168);
+            this.plusgreen.Name = "plusgreen";
+            this.plusgreen.Size = new System.Drawing.Size(100, 50);
+            this.plusgreen.TabIndex = 62;
+            this.plusgreen.TabStop = false;
+            // 
+            // taki
+            // 
+            this.taki.Image = ((System.Drawing.Image)(resources.GetObject("taki.Image")));
+            this.taki.Location = new System.Drawing.Point(375, 168);
+            this.taki.Name = "taki";
+            this.taki.Size = new System.Drawing.Size(100, 50);
+            this.taki.TabIndex = 61;
+            this.taki.TabStop = false;
+            // 
+            // chacol
+            // 
+            this.chacol.Location = new System.Drawing.Point(458, 168);
+            this.chacol.Name = "chacol";
+            this.chacol.Size = new System.Drawing.Size(100, 50);
+            this.chacol.TabIndex = 60;
+            this.chacol.TabStop = false;
+            // 
+            // takiyellow
+            // 
+            this.takiyellow.Location = new System.Drawing.Point(541, 280);
+            this.takiyellow.Name = "takiyellow";
+            this.takiyellow.Size = new System.Drawing.Size(100, 50);
+            this.takiyellow.TabIndex = 59;
+            this.takiyellow.TabStop = false;
+            // 
+            // fivegreen
+            // 
+            this.fivegreen.Location = new System.Drawing.Point(624, 280);
+            this.fivegreen.Name = "fivegreen";
+            this.fivegreen.Size = new System.Drawing.Size(100, 50);
+            this.fivegreen.TabIndex = 58;
+            this.fivegreen.TabStop = false;
+            // 
+            // sixgreen
+            // 
+            this.sixgreen.Location = new System.Drawing.Point(707, 280);
+            this.sixgreen.Name = "sixgreen";
+            this.sixgreen.Size = new System.Drawing.Size(100, 50);
+            this.sixgreen.TabIndex = 57;
+            this.sixgreen.TabStop = false;
+            // 
+            // sevengreen
+            // 
+            this.sevengreen.Location = new System.Drawing.Point(790, 280);
+            this.sevengreen.Name = "sevengreen";
+            this.sevengreen.Size = new System.Drawing.Size(100, 50);
+            this.sevengreen.TabIndex = 56;
+            this.sevengreen.TabStop = false;
+            // 
+            // eightgreen
+            // 
+            this.eightgreen.Location = new System.Drawing.Point(873, 280);
+            this.eightgreen.Name = "eightgreen";
+            this.eightgreen.Size = new System.Drawing.Size(100, 50);
+            this.eightgreen.TabIndex = 55;
+            this.eightgreen.TabStop = false;
+            // 
+            // ninegreen
+            // 
+            this.ninegreen.Location = new System.Drawing.Point(957, 280);
+            this.ninegreen.Name = "ninegreen";
+            this.ninegreen.Size = new System.Drawing.Size(100, 50);
+            this.ninegreen.TabIndex = 54;
+            this.ninegreen.TabStop = false;
+            // 
+            // stopgreen
+            // 
+            this.stopgreen.Location = new System.Drawing.Point(43, 168);
+            this.stopgreen.Name = "stopgreen";
+            this.stopgreen.Size = new System.Drawing.Size(100, 50);
+            this.stopgreen.TabIndex = 53;
+            this.stopgreen.TabStop = false;
+            // 
+            // takigreen
+            // 
+            this.takigreen.Location = new System.Drawing.Point(1040, 280);
+            this.takigreen.Name = "takigreen";
+            this.takigreen.Size = new System.Drawing.Size(100, 50);
+            this.takigreen.TabIndex = 52;
+            this.takigreen.TabStop = false;
+            // 
+            // sevenyellow
+            // 
+            this.sevenyellow.Location = new System.Drawing.Point(126, 280);
+            this.sevenyellow.Name = "sevenyellow";
+            this.sevenyellow.Size = new System.Drawing.Size(100, 50);
+            this.sevenyellow.TabIndex = 51;
+            this.sevenyellow.TabStop = false;
+            // 
+            // eightyellow
+            // 
+            this.eightyellow.Location = new System.Drawing.Point(209, 280);
+            this.eightyellow.Name = "eightyellow";
+            this.eightyellow.Size = new System.Drawing.Size(100, 50);
+            this.eightyellow.TabIndex = 50;
+            this.eightyellow.TabStop = false;
+            // 
+            // nineyellow
+            // 
+            this.nineyellow.Location = new System.Drawing.Point(292, 280);
+            this.nineyellow.Name = "nineyellow";
+            this.nineyellow.Size = new System.Drawing.Size(100, 50);
+            this.nineyellow.TabIndex = 49;
+            this.nineyellow.TabStop = false;
+            // 
+            // plusyellow
+            // 
+            this.plusyellow.Location = new System.Drawing.Point(375, 280);
+            this.plusyellow.Name = "plusyellow";
+            this.plusyellow.Size = new System.Drawing.Size(100, 50);
+            this.plusyellow.TabIndex = 48;
+            this.plusyellow.TabStop = false;
+            // 
+            // plustwoyellow
+            // 
+            this.plustwoyellow.Location = new System.Drawing.Point(458, 280);
+            this.plustwoyellow.Name = "plustwoyellow";
+            this.plustwoyellow.Size = new System.Drawing.Size(100, 50);
+            this.plustwoyellow.TabIndex = 47;
+            this.plustwoyellow.TabStop = false;
+            // 
+            // first_player
+            // 
+            this.first_player.AutoEllipsis = true;
+            this.first_player.BackColor = System.Drawing.SystemColors.Info;
+            this.first_player.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.first_player.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.first_player.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.first_player.Location = new System.Drawing.Point(946, 285);
+            this.first_player.Name = "first_player";
+            this.first_player.Size = new System.Drawing.Size(182, 111);
+            this.first_player.TabIndex = 0;
+            this.first_player.Text = "0";
+            this.first_player.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // second_player
+            // 
+            this.second_player.BackColor = System.Drawing.SystemColors.Info;
+            this.second_player.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.second_player.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.second_player.Location = new System.Drawing.Point(486, 22);
+            this.second_player.Name = "second_player";
+            this.second_player.Size = new System.Drawing.Size(181, 111);
+            this.second_player.TabIndex = 1;
+            this.second_player.Text = "0";
+            this.second_player.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // third_player
+            // 
+            this.third_player.BackColor = System.Drawing.SystemColors.Info;
+            this.third_player.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.third_player.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.third_player.Location = new System.Drawing.Point(64, 285);
+            this.third_player.Name = "third_player";
+            this.third_player.Size = new System.Drawing.Size(182, 111);
+            this.third_player.TabIndex = 2;
+            this.third_player.Text = "0";
+            this.third_player.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(466, 2);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.Location = new System.Drawing.Point(453, 254);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 143);
-            this.panel1.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 75);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "0";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(971, 258);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(191, 163);
-            this.panel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 75);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "0";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(0, 258);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(191, 163);
-            this.panel3.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 40);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 75);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "0";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(448, 220);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(254, 201);
-            this.panel4.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 160);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "0";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label17);
-            this.panel5.Location = new System.Drawing.Point(21, 597);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(87, 121);
-            this.panel5.TabIndex = 4;
-            // 
-            // label17
-            // 
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(21, 23);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(45, 75);
-            this.label17.TabIndex = 3;
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label28);
-            this.panel7.Location = new System.Drawing.Point(1048, 597);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(87, 121);
-            this.panel7.TabIndex = 5;
-            // 
-            // label28
-            // 
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(21, 23);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(45, 75);
-            this.label28.TabIndex = 3;
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.label27);
-            this.panel8.Location = new System.Drawing.Point(955, 597);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(87, 121);
-            this.panel8.TabIndex = 5;
-            // 
-            // label27
-            // 
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(21, 23);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(45, 75);
-            this.label27.TabIndex = 3;
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.label26);
-            this.panel9.Location = new System.Drawing.Point(862, 597);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(87, 121);
-            this.panel9.TabIndex = 5;
-            // 
-            // label26
-            // 
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(21, 23);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(45, 75);
-            this.label26.TabIndex = 3;
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.label25);
-            this.panel10.Location = new System.Drawing.Point(769, 597);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(87, 121);
-            this.panel10.TabIndex = 5;
-            // 
-            // label25
-            // 
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(21, 23);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(45, 75);
-            this.label25.TabIndex = 3;
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.label23);
-            this.panel11.Location = new System.Drawing.Point(579, 597);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(87, 121);
-            this.panel11.TabIndex = 5;
-            // 
-            // label23
-            // 
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(21, 23);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(45, 75);
-            this.label23.TabIndex = 3;
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.label22);
-            this.panel12.Location = new System.Drawing.Point(486, 597);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(87, 121);
-            this.panel12.TabIndex = 5;
-            // 
-            // label22
-            // 
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(21, 23);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(45, 75);
-            this.label22.TabIndex = 3;
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.label20);
-            this.panel13.Location = new System.Drawing.Point(300, 597);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(87, 121);
-            this.panel13.TabIndex = 5;
-            // 
-            // label20
-            // 
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(21, 23);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(45, 75);
-            this.label20.TabIndex = 3;
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.label24);
-            this.panel14.Location = new System.Drawing.Point(676, 597);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(87, 121);
-            this.panel14.TabIndex = 5;
-            // 
-            // label24
-            // 
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(21, 23);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(45, 75);
-            this.label24.TabIndex = 3;
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.label19);
-            this.panel15.Location = new System.Drawing.Point(207, 597);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(87, 121);
-            this.panel15.TabIndex = 5;
-            // 
-            // label19
-            // 
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(21, 23);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(45, 75);
-            this.label19.TabIndex = 3;
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.label21);
-            this.panel16.Location = new System.Drawing.Point(393, 597);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(87, 121);
-            this.panel16.TabIndex = 5;
-            // 
-            // label21
-            // 
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(21, 23);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(45, 75);
-            this.label21.TabIndex = 3;
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.label18);
-            this.panel17.Location = new System.Drawing.Point(114, 597);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(87, 121);
-            this.panel17.TabIndex = 5;
-            // 
-            // label18
-            // 
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(21, 23);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(45, 75);
-            this.label18.TabIndex = 3;
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(1048, 470);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(87, 121);
-            this.panel6.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(21, 25);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 75);
-            this.label5.TabIndex = 1;
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.label6);
-            this.panel18.Location = new System.Drawing.Point(955, 470);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(87, 121);
-            this.panel18.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 23);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 75);
-            this.label6.TabIndex = 2;
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.label7);
-            this.panel19.Location = new System.Drawing.Point(862, 470);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(87, 121);
-            this.panel19.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(21, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 75);
-            this.label7.TabIndex = 3;
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.label8);
-            this.panel20.Location = new System.Drawing.Point(769, 470);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(87, 121);
-            this.panel20.TabIndex = 10;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(21, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 75);
-            this.label8.TabIndex = 3;
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel21
-            // 
-            this.panel21.Controls.Add(this.label9);
-            this.panel21.Location = new System.Drawing.Point(676, 470);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(87, 121);
-            this.panel21.TabIndex = 11;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(21, 23);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 75);
-            this.label9.TabIndex = 3;
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel22
-            // 
-            this.panel22.Controls.Add(this.label10);
-            this.panel22.Location = new System.Drawing.Point(579, 470);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(87, 121);
-            this.panel22.TabIndex = 12;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(21, 23);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 75);
-            this.label10.TabIndex = 3;
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.label11);
-            this.panel23.Location = new System.Drawing.Point(486, 470);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(87, 121);
-            this.panel23.TabIndex = 13;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(21, 23);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 75);
-            this.label11.TabIndex = 3;
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel24
-            // 
-            this.panel24.Controls.Add(this.label12);
-            this.panel24.Location = new System.Drawing.Point(393, 470);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(87, 121);
-            this.panel24.TabIndex = 14;
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(21, 23);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 75);
-            this.label12.TabIndex = 3;
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel25
-            // 
-            this.panel25.Controls.Add(this.label13);
-            this.panel25.Location = new System.Drawing.Point(300, 470);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(87, 121);
-            this.panel25.TabIndex = 15;
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(21, 23);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 75);
-            this.label13.TabIndex = 3;
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel26
-            // 
-            this.panel26.Controls.Add(this.label14);
-            this.panel26.Location = new System.Drawing.Point(207, 470);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(87, 121);
-            this.panel26.TabIndex = 16;
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(21, 23);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 75);
-            this.label14.TabIndex = 3;
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel27
-            // 
-            this.panel27.Controls.Add(this.label15);
-            this.panel27.Location = new System.Drawing.Point(114, 470);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(87, 121);
-            this.panel27.TabIndex = 17;
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(21, 23);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(45, 75);
-            this.label15.TabIndex = 3;
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel28
-            // 
-            this.panel28.Controls.Add(this.label16);
-            this.panel28.Location = new System.Drawing.Point(21, 470);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(87, 121);
-            this.panel28.TabIndex = 6;
-            // 
-            // label16
-            // 
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(21, 23);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(45, 75);
-            this.label16.TabIndex = 3;
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.panel1.Size = new System.Drawing.Size(262, 219);
+            this.panel1.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 731);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel18);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel19);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel20);
-            this.Controls.Add(this.panel10);
-            this.Controls.Add(this.panel21);
-            this.Controls.Add(this.panel14);
-            this.Controls.Add(this.panel22);
-            this.Controls.Add(this.panel11);
-            this.Controls.Add(this.panel23);
-            this.Controls.Add(this.panel12);
-            this.Controls.Add(this.panel24);
-            this.Controls.Add(this.panel16);
-            this.Controls.Add(this.panel25);
-            this.Controls.Add(this.panel13);
-            this.Controls.Add(this.panel26);
-            this.Controls.Add(this.panel15);
-            this.Controls.Add(this.panel27);
-            this.Controls.Add(this.panel17);
-            this.Controls.Add(this.panel28);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1152, 736);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.third_player);
+            this.Controls.Add(this.second_player);
+            this.Controls.Add(this.first_player);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel18.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel20.ResumeLayout(false);
-            this.panel21.ResumeLayout(false);
-            this.panel22.ResumeLayout(false);
-            this.panel23.ResumeLayout(false);
-            this.panel24.ResumeLayout(false);
-            this.panel25.ResumeLayout(false);
-            this.panel26.ResumeLayout(false);
-            this.panel27.ResumeLayout(false);
-            this.panel28.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.onered)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twored)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threered)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fourred)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fivered)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sixred)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sevenred)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eightred)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ninered)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plusred)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plustwored)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.takired)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stopred)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chadirred)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oneblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twoblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threeblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fourblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fiveblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sixblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sevenblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eightblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nineblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plusblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plustwoblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.takiblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chdirblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oneyellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twoyellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fouryellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threeyellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chadiryellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stopyellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onegreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twogreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threegreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fourgreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stopblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fiveyellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sixyellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chadirgreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plustwogreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plusgreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taki)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chacol)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.takiyellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fivegreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sixgreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sevengreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eightgreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ninegreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stopgreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.takigreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sevenyellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eightyellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nineyellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plusyellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plustwoyellow)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.PictureBox onered;
+        private System.Windows.Forms.PictureBox threered;
+        private System.Windows.Forms.PictureBox fourred;
+        private System.Windows.Forms.PictureBox fivered;
+        private System.Windows.Forms.PictureBox sixred;
+        private System.Windows.Forms.PictureBox sevenred;
+        private System.Windows.Forms.PictureBox eightred;
+        private System.Windows.Forms.PictureBox ninered;
+        private System.Windows.Forms.PictureBox plusred;
+        private System.Windows.Forms.PictureBox plustwored;
+        private System.Windows.Forms.PictureBox takired;
+        private System.Windows.Forms.PictureBox stopred;
+        private System.Windows.Forms.PictureBox chadirred;
+        private System.Windows.Forms.PictureBox twored;
+        private System.Windows.Forms.PictureBox oneblue;
+        private System.Windows.Forms.PictureBox twoblue;
+        private System.Windows.Forms.PictureBox threeblue;
+        private System.Windows.Forms.PictureBox fourblue;
+        private System.Windows.Forms.PictureBox fiveblue;
+        private System.Windows.Forms.PictureBox sixblue;
+        private System.Windows.Forms.PictureBox sevenblue;
+        private System.Windows.Forms.PictureBox eightblue;
+        private System.Windows.Forms.PictureBox nineblue;
+        private System.Windows.Forms.PictureBox plusblue;
+        private System.Windows.Forms.PictureBox plustwoblue;
+        private System.Windows.Forms.PictureBox takiblue;
+        private System.Windows.Forms.PictureBox chdirblue;
+        private System.Windows.Forms.PictureBox oneyellow;
+        private System.Windows.Forms.PictureBox twoyellow;
+        private System.Windows.Forms.PictureBox fouryellow;
+        private System.Windows.Forms.PictureBox threeyellow;
+        private System.Windows.Forms.PictureBox chadiryellow;
+        private System.Windows.Forms.PictureBox stopyellow;
+        private System.Windows.Forms.PictureBox onegreen;
+        private System.Windows.Forms.PictureBox twogreen;
+        private System.Windows.Forms.PictureBox threegreen;
+        private System.Windows.Forms.PictureBox fourgreen;
+        private System.Windows.Forms.PictureBox stopblue;
+        private System.Windows.Forms.PictureBox fiveyellow;
+        private System.Windows.Forms.PictureBox sixyellow;
+        private System.Windows.Forms.PictureBox chadirgreen;
+        private System.Windows.Forms.PictureBox plustwogreen;
+        private System.Windows.Forms.PictureBox plusgreen;
+        private System.Windows.Forms.PictureBox taki;
+        private System.Windows.Forms.PictureBox chacol;
+        private System.Windows.Forms.PictureBox takiyellow;
+        private System.Windows.Forms.PictureBox fivegreen;
+        private System.Windows.Forms.PictureBox sixgreen;
+        private System.Windows.Forms.PictureBox sevengreen;
+        private System.Windows.Forms.PictureBox eightgreen;
+        private System.Windows.Forms.PictureBox ninegreen;
+        private System.Windows.Forms.PictureBox stopgreen;
+        private System.Windows.Forms.PictureBox takigreen;
+        private System.Windows.Forms.PictureBox sevenyellow;
+        private System.Windows.Forms.PictureBox eightyellow;
+        private System.Windows.Forms.PictureBox nineyellow;
+        private System.Windows.Forms.PictureBox plusyellow;
+        private System.Windows.Forms.PictureBox plustwoyellow;
+        private System.Windows.Forms.Label first_player;
+        private System.Windows.Forms.Label second_player;
+        private System.Windows.Forms.Label third_player;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Timer timer1;
     }
 }
 

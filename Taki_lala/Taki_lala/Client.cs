@@ -24,7 +24,7 @@ namespace Taki_lala
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, 11000); // Server address
 
                 // Create a TCP/IP  socket.  
-                Socket client = new Socket(SocketType.Stream, ProtocolType.Tcp);
+                this.client = new Socket(SocketType.Stream, ProtocolType.Tcp);
 
                 // Connect the socket to the remote endpoint. Catch any errors.  
                 client.Connect(remoteEP);
