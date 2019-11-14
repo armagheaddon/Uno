@@ -15,7 +15,7 @@ namespace Taki_lala
    
         static void Main(string[] args)
         {
-
+            Client client = new Client();
         }
 
         [STAThread]

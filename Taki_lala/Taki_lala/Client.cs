@@ -14,17 +14,17 @@ namespace Taki_lala
 
         private Socket client;
         private byte[] bytes = new byte[1024];  // Data buffer for incoming data. 
-
+        private Queue<Dictionary<string, dynamic>> msg = new Queue<Dictionary<string, dynamic>>();
         public Client()
         {
             try
             {
                 // Establish the remote endpoint for the socket.  
-                IPAddress ipAddress = IPAddress.Parse("0.0.0.0");       // Server IP
-                IPEndPoint remoteEP = new IPEndPoint(ipAddress, 11000); // Server address
+                IPAddress ipAddress = IPAddress.Parse("192.168.1.146");       // Server IP
+                IPEndPoint remoteEP = new IPEndPoint(ipAddress, 50000); // Server address
 
                 // Create a TCP/IP  socket.  
-                Socket client = new Socket(SocketType.Stream, ProtocolType.Tcp);
+                client = new Socket(SocketType.Stream, ProtocolType.Tcp);
 
                 // Connect the socket to the remote endpoint. Catch any errors.  
                 client.Connect(remoteEP);
@@ -32,26 +32,35 @@ namespace Taki_lala
                 Console.WriteLine("Sending password");
                 string password = "1234";
                 Send(password);
-                if (ReceiveToString() == "Login Successful")
+                var data = Receive();
+                if (data["command"] == "Login Successful")
                 {
                     int ID = ReceiveID();
-                    
+                    Console.WriteLine("our id is"+ ID);
                 }
                 else
-                    throw new System.ArgumentException("Incorrect Password");
+                    throw new System.ArgumentException("Incorrect Password "+data);
                 //TODO: add receive.
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
                 CloseSocket();
-                Environment.Exit(0);
+                Environment.Exit(-1);
             }
+        }
+
+        public void TakeAPart (string newmsg)
+        {
+            int length = (int)newmsg[0] * 1000 + (int)newmsg[1] * 100 + (int)newmsg[2] * 10 + (int)newmsg[3] - 1;
+            newmsg.Substring(0, length);
         }
         public int ReceiveID()
         {
-            string data = ReceiveToString();
-            return data[data.Length - 1];
+            Dictionary<string, dynamic> data = Receive();
+            Console.WriteLine(data);
+            string stringdata = data["command"];
+            return stringdata[stringdata.Length - 1];
         }
         public string ReceiveToString()
         {
