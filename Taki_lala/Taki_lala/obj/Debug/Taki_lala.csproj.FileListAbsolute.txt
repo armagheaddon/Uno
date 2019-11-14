@@ -1,0 +1,21 @@
+C:\Users\Noam\source\repos\Taki_lala\Taki_lala\bin\Debug\Taki_lala.exe.config
+C:\Users\Noam\source\repos\Taki_lala\Taki_lala\bin\Debug\Taki_lala.exe
+C:\Users\Noam\source\repos\Taki_lala\Taki_lala\bin\Debug\Taki_lala.pdb
+C:\Users\Noam\source\repos\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csprojAssemblyReference.cache
+C:\Users\Noam\source\repos\Taki_lala\Taki_lala\obj\Debug\Taki_lala.Form1.resources
+C:\Users\Noam\source\repos\Taki_lala\Taki_lala\obj\Debug\Taki_lala.Properties.Resources.resources
+C:\Users\Noam\source\repos\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csproj.GenerateResource.cache
+C:\Users\Noam\source\repos\Taki_lala\Taki_lala\obj\Debug\Taki_lala.exe
+C:\Users\Noam\source\repos\Taki_lala\Taki_lala\obj\Debug\Taki_lala.pdb
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Taki_lala.exe.config
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Taki_lala.exe
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Taki_lala.pdb
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csprojAssemblyReference.cache
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.Form1.resources
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.Properties.Resources.resources
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csproj.GenerateResource.cache
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csproj.CopyComplete
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.exe
+C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.pdb
