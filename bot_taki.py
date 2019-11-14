@@ -136,7 +136,7 @@ and a list of the playable cards
     return cards_playing, changed_color, take_card
 
 
-def turn (hand, after_me, before_me, pile, pile_color)
+def turn (hand, after_me, before_me, pile, pile_color, before_me_last_turn)
 """
 This function require our hand, the amount of cards the player before
 us have, the amount of cards the player before us have the pile and the piles color
@@ -158,13 +158,18 @@ a string that holds the color which we want to change to (this string will be em
                                  
     #if someone used +2 on us                               
     if pile["value"] == "+2":
-        if how_many_STOP_or_+2 > 0:
-            for card in cards_that_can_play:
-                if card["value"] == "+2":
-                    cards_playing.append(card)
-                    break
+        if before_me - before_me_last_turn <= 1:
+            cards_playing, changed_color, take_card = plain_strat (hand, how_many_TAKI, how_many_+, how_many_CHADIR, how_many_STOP_or_+2, how_many_CHCOL, how_many_regular_num, cards_that_can_play)
         else:
-            take_card = True
+            if how_many_STOP_or_+2 > 0:
+                for card in cards_that_can_play:
+                    if card["value"] == "+2":
+                        cards_playing.append(card)
+                        break
+                    else:
+                        take_card = True
+            else:
+                take_card = True
     """
     Strategy:
     the strategy can be found in taki.docs as a well explained flowchart
