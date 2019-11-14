@@ -1,6 +1,6 @@
-def count_playable_cards (hand):
+def count_playable_cards (hand,pile,pile_color):
 """
-This function only takes the hand list
+This function only takes the hand list the pile and the piles color
 It returns the amount of playable cards we have sorted by their type
 and a list of all the playable cards
 """
@@ -136,10 +136,10 @@ and a list of the playable cards
     return cards_playing, changed_color, take_card
 
 
-def turn (hand, after_me, before_me)
+def turn (hand, after_me, before_me, pile, pile_color)
 """
 This function require our hand, the amount of cards the player before
-us have and the amount of cards the player before us have
+us have, the amount of cards the player before us have the pile and the piles color
 
 The function returns a list [a list of cards that we need to play this turn,
 a boolian variable that that indicates if we need to take a card,
