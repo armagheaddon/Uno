@@ -106,21 +106,21 @@ def more_strat (hand, how_many_TAKI, how_many_plus, how_many_CHADIR, how_many_ST
                              
                         else:
                             order = "draw card"
+    else:
+        if how_many_regular_num > 0:
+            optional_cards = find_correct_card(cards_that_can_play,["1", "2", "3", "4", "5", "6", "7", "8", "9"])
+            cards_playing.append(optional_cards[0])
         else:
-            if how_many_regular_num > 0:
-                optional_cards = find_correct_card(cards_that_can_play,["1", "2", "3", "4", "5", "6", "7", "8", "9"])
+            if how_many_CHADIR > 0:
+                optional_cards = find_correct_card(cards_that_can_play,["CHDIR"])
                 cards_playing.append(optional_cards[0])
             else:
-                if how_many_CHADIR > 0:
-                    optional_cards = find_correct_card(cards_that_can_play,["CHDIR"])
+                if how_many_CHCOL > 0:
+                    optional_cards = find_correct_card(cards_that_can_play,["CHCOL"])
                     cards_playing.append(optional_cards[0])
+                    changed_color = the_color_with_the_largest_amount_of_cards(hand)
                 else:
-                    if how_many_CHCOL > 0:
-                        optional_cards = find_correct_card(cards_that_can_play,["CHCOL"])
-                        cards_playing.append(optional_cards[0])
-                        changed_color = the_color_with_the_largest_amount_of_cards(hand)
-                    else:
-                       order = "draw card"
+                    order = "draw card"
     return cards_playing, order     
 
 def plain_strat (hand, how_many_TAKI, how_many_plus, how_many_CHADIR, how_many_STOP_or_plus_two, how_many_CHCOL, how_many_regular_num, cards_that_can_play):
