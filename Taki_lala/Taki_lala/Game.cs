@@ -25,8 +25,10 @@ namespace Taki_lala
         public Game ()
         {
             client = new Client();
+            Console.WriteLine("connected");
             this.myID = client.ReceiveID();
-            Console.WriteLine("our id is" + myID);
+            Console.WriteLine("our id is " + myID);
+            Console.WriteLine("id type - " + myID.GetType());
 
             this.history = new List<Dictionary<string, dynamic>>();
             IronPythonSetUp();
@@ -36,16 +38,19 @@ namespace Taki_lala
        
         public void IronPythonSetUp()
         {
+            Console.WriteLine("iron python setup");
             engine = Python.CreateEngine();     // Extract Python language engine from their grasp
             scope = engine.CreateScope();       // Introduce Python namespace (scope)
-            source = engine.CreateScriptSourceFromFile("C:/Users/dooda/OneDrive/שולחן העבודה/Uno/bot_taki.py"); // Load the script. TODO: ADD PATH
+            source = engine.CreateScriptSourceFromFile("C:/Users/u101040.DESHALIT/Desktop/Uno/bot_taki.py"); // Load the script. TODO: ADD PATH
             source.Execute(scope);
             calcTurn = scope.GetVariable("turn");
             //scope.SetVariable("params", d);         // This will be the name of the dictionary in python script
+            Console.WriteLine("finished setup");
         }
 
         public void runGameLoop()
         {
+            Console.WriteLine("GAME LOOP STARTED");
             List<dynamic> myAction;
             List<dynamic> vars;
             var gameState = client.GetIncoming();
@@ -53,6 +58,7 @@ namespace Taki_lala
             while(gameState != null)
             {
                 history.Add(gameState);
+                Console.WriteLine(gameState["turn"] + "'s turn");
                 if (gameState["turn"] == myID)
                 {
                     Console.WriteLine("my turn!!!!!!!!!!!");
@@ -91,10 +97,7 @@ namespace Taki_lala
         public List<dynamic> calcVars(dynamic gameState)
         {
             List<dynamic> vars = new List<dynamic>();
-            // my variables
-            int afterMe;
             int myIndex;
-            int nextIndex;
 
             vars.Add(gameState["hand"]);
 

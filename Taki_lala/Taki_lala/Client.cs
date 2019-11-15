@@ -22,7 +22,7 @@ namespace Taki_lala
             try
             {
                 // Establish the remote endpoint for the socket.  
-                IPAddress ipAddress = IPAddress.Parse("10.0.0.13");       // Server IP
+                IPAddress ipAddress = IPAddress.Parse("172.16.10.200");       // Server IP
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, 50000); // Server address
 
                 // Create a TCP/IP  socket.  
@@ -32,12 +32,14 @@ namespace Taki_lala
                 client.Connect(remoteEP);
                 Console.WriteLine("Socket connected to {0}", client.RemoteEndPoint.ToString());
                 receiveLoop = new Thread(new ThreadStart(ReceiveLoop));
+                receiveLoop.Start();
 
                 Console.WriteLine("Sending password");
                 string password = "1234";
                 Send(password);
-
+                Console.WriteLine("Sent password");
                 var data = GetIncoming();
+                Console.WriteLine("Receive - "+data);
                 if (data["command"] != "Login Successful")
                 {
                     throw new System.ArgumentException("Incorrect Password " + data);
@@ -82,10 +84,8 @@ namespace Taki_lala
             Dictionary<string, dynamic> dict;
             while (newmsg != "")
             {
-                Console.WriteLine(newmsg.Substring(0, 4));
                 length = int.Parse(newmsg.Substring(0, 4));
                 single = newmsg.Substring(4, length);
-                Console.WriteLine(single);
                 dict = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(single);
                 incoming.Enqueue(dict);
                 newmsg = newmsg.Substring(length + 4);
@@ -96,7 +96,7 @@ namespace Taki_lala
         {
             Dictionary<string, dynamic> data = GetIncoming();
             string stringdata = data["command"];
-            return stringdata[stringdata.Length - 1];
+            return (int)((char)stringdata[stringdata.Length - 1]-'0');
         }
 
         public string ReceiveToString()
@@ -145,9 +145,19 @@ namespace Taki_lala
 
         public void CloseSocket()
         {
-            // Release the socket.  
-            client.Shutdown(SocketShutdown.Both);
-            client.Close();
+            try
+            {
+                // Release the socket.  
+                if (client.Connected)
+                {
+                    client.Shutdown(SocketShutdown.Both);
+                    client.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                return;
+            }
         }
 
         public void DoNothing()

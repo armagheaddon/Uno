@@ -45,3 +45,30 @@ C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debu
 C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Dynamic.xml
 C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.xml
 C:\Users\dooda\OneDrive\שולחן העבודה\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Taki_lala.exe.config
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Taki_lala.exe
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Taki_lala.pdb
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.dll
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.Modules.dll
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.SQLite.dll
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.Wpf.dll
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.dll
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Newtonsoft.Json.dll
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.xml
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.Modules.xml
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.SQLite.xml
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.Wpf.xml
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.xml
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Newtonsoft.Json.xml
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csprojAssemblyReference.cache
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.Form1.resources
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.Properties.Resources.resources
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csproj.GenerateResource.cache
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csproj.CoreCompileInputs.cache
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csproj.CopyComplete
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.exe
+C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.pdb
