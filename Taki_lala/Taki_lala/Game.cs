@@ -55,9 +55,11 @@ namespace Taki_lala
                 history.Add(gameState);
                 if (gameState["turn"] == myID)
                 {
+                    Console.WriteLine("my turn!!!!!!!!!!!");
                     vars = calcVars(gameState);
                     myAction = calcTurn(vars[0], vars[1], vars[2], vars[3], vars[4], vars[5]);
-                    for(int i = 0; i < myAction[0].Count(); i++)
+                    Console.WriteLine("Action - "+myAction);
+                    for (int i = 0; i < myAction[0].Count(); i++)
                     {
                         if(i == myAction[0].Count() - 1)
                         {
@@ -79,7 +81,9 @@ namespace Taki_lala
                         gameState = client.GetIncoming();
                         history.Add(gameState);
                     }
+                    Console.WriteLine("");
                 }
+                gameState = client.GetIncoming();
             }
             RunGraphics();
         }

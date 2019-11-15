@@ -22,7 +22,7 @@ namespace Taki_lala
             try
             {
                 // Establish the remote endpoint for the socket.  
-                IPAddress ipAddress = IPAddress.Parse("192.168.1.146");       // Server IP
+                IPAddress ipAddress = IPAddress.Parse("10.0.0.13");       // Server IP
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, 50000); // Server address
 
                 // Create a TCP/IP  socket.  
