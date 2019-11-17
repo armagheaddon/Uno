@@ -14,7 +14,7 @@ namespace Taki_lala
     {
 
         private Socket client;
-        private byte[] bytes = new byte[1024];  // Data buffer for incoming data. 
+        private byte[] bytes = new byte[4096];  // Data buffer for incoming data. 
         private Queue<Dictionary<string, dynamic>> incoming = new Queue<Dictionary<string, dynamic>>();
         private Thread receiveLoop;
         public Client()
@@ -22,7 +22,7 @@ namespace Taki_lala
             try
             {
                 // Establish the remote endpoint for the socket.  
-                IPAddress ipAddress = IPAddress.Parse("172.16.10.200");       // Server IP
+                IPAddress ipAddress = IPAddress.Parse("10.0.0.13");       // Server IP
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, 50000); // Server address
 
                 // Create a TCP/IP  socket.  
@@ -39,7 +39,7 @@ namespace Taki_lala
                 Send(password);
                 Console.WriteLine("Sent password");
                 var data = GetIncoming();
-                Console.WriteLine("Receive - "+data);
+                Console.WriteLine("Received - " + data);
                 if (data["command"] != "Login Successful")
                 {
                     throw new System.ArgumentException("Incorrect Password " + data);
@@ -80,15 +80,18 @@ namespace Taki_lala
         public void TakeAPart(string newmsg)
         {
             int length;
-            string single;
+            string singleMsg, incomplete;
             Dictionary<string, dynamic> dict;
+
             while (newmsg != "")
             {
                 length = int.Parse(newmsg.Substring(0, 4));
-                single = newmsg.Substring(4, length);
-                dict = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(single);
+                newmsg = newmsg.Substring(4);
+
+                singleMsg = newmsg.Substring(0, length);
+                dict = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(singleMsg);
                 incoming.Enqueue(dict);
-                newmsg = newmsg.Substring(length + 4);
+                newmsg = newmsg.Substring(length);
             }
         }
 

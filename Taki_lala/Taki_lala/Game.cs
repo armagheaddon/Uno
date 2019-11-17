@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 
 namespace Taki_lala
@@ -41,7 +42,7 @@ namespace Taki_lala
             Console.WriteLine("iron python setup");
             engine = Python.CreateEngine();     // Extract Python language engine from their grasp
             scope = engine.CreateScope();       // Introduce Python namespace (scope)
-            source = engine.CreateScriptSourceFromFile("C:/Users/u101040.DESHALIT/Desktop/Uno/bot_taki.py"); // Load the script. TODO: ADD PATH
+            source = engine.CreateScriptSourceFromFile("C:/Users/dooda/OneDrive/שולחן העבודה/Uno/bot_taki.py"); // Load the script. TODO: ADD PATH
             source.Execute(scope);
             calcTurn = scope.GetVariable("turn");
             //scope.SetVariable("params", d);         // This will be the name of the dictionary in python script
@@ -78,9 +79,7 @@ namespace Taki_lala
                             }
                             else
                                 client.Send(myAction[0][i], myAction[1]);
-
                         }
-
                         else
                             client.Send(myAction[0][i], "");
 
@@ -101,8 +100,9 @@ namespace Taki_lala
 
             vars.Add(gameState["hand"]);
 
-            myIndex = gameState["players"].indexOf(myID);
-            
+            gameState["players"] = gameState["players"].ToObject<List<int>>();
+            myIndex = gameState["players"].IndexOf(myID);
+
             vars.Add(amountOfCards(myIndex, gameState["others"], 1, gameState["turn_dir"]));
             vars.Add(amountOfCards(myIndex, gameState["others"], 1, -gameState["turn_dir"]));
             vars.Add(gameState["pile"]);
@@ -112,9 +112,9 @@ namespace Taki_lala
             return vars;
         }
 
-        public int amountOfCards(int myIndex, List<int> others, int distance, int direction)
+        public int amountOfCards(dynamic myIndex, dynamic others, int distance, dynamic direction)
         {
-            int neededIndex = myIndex;
+            var neededIndex = myIndex;
             for (int i = distance; i > 0; i--)
             {
                 if (neededIndex == others.Count - 1 && direction > 0)
@@ -127,7 +127,7 @@ namespace Taki_lala
                         neededIndex += direction;
                 }
             }
-            return others[neededIndex];
+            return others[Convert.ToInt32(neededIndex)];
         }
 
         [STAThread]
