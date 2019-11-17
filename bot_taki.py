@@ -70,7 +70,7 @@ def the_color_with_the_largest_amount_of_cards(hand):
             else:
                 return "green"
 
-def more_strat (hand, how_many_TAKI, how_many_plus, how_many_CHADIR, how_many_STOP_or_plus_two, how_many_CHCOL, how_many_regular_num, cards_that_can_play):
+def more_strat (hand, how_many_TAKI, how_many_plus, how_many_CHADIR, how_many_STOP_or_plus_two, how_many_CHCOL, how_many_regular_num, cards_that_can_play, cards_playing):
     """
     This function is an extension to plain_strat
     """
@@ -141,13 +141,13 @@ def plain_strat (hand, how_many_TAKI, how_many_plus, how_many_CHADIR, how_many_S
                     if len(cards_that_can_play) > 0:
                         cards_playing.append(card)
                     else:
-                        cards_playing, order = more_strat (hand, how_many_TAKI, how_many_plus, how_many_CHADIR, how_many_STOP_or_plus_two, how_many_CHCOL, how_many_regular_num, cards_that_can_play)
+                        cards_playing, order = more_strat (hand, how_many_TAKI, how_many_plus, how_many_CHADIR, how_many_STOP_or_plus_two, how_many_CHCOL, how_many_regular_num, cards_that_can_play, cards_playing)
         for card in cards_that_can_play:
             if card["value"] != "TAKI" and card["color"] != "ALL":
                 cards_playing.append(card)
         order = "close taki"
     else:
-        cards_playing, order = more_strat (hand, how_many_TAKI, how_many_plus, how_many_CHADIR, how_many_STOP_or_plus_two, how_many_CHCOL, how_many_regular_num, cards_that_can_play)
+        cards_playing, order = more_strat (hand, how_many_TAKI, how_many_plus, how_many_CHADIR, how_many_STOP_or_plus_two, how_many_CHCOL, how_many_regular_num, cards_that_can_play, cards_playing)
     return cards_playing, order
 
 def turn (hand, after_me, before_me, pile, pile_color, before_me_last_turn):
