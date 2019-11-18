@@ -22,7 +22,7 @@ namespace Taki_lala
             try
             {
                 // Establish the remote endpoint for the socket.  
-                IPAddress ipAddress = IPAddress.Parse("10.0.0.13");       // Server IP
+                IPAddress ipAddress = IPAddress.Parse("192.168.1.146");       // Server IP
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, 50000); // Server address
 
                 // Create a TCP/IP  socket.  
@@ -133,7 +133,7 @@ namespace Taki_lala
             client.Send(msg);
         }
 
-        public void Send(Dictionary<string, dynamic> card, string order)
+        public void Send(dynamic card, string order)
         {
             Dictionary<string, string> turnDict = new Dictionary<string, string>();
             turnDict.Add("order", order);

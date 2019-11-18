@@ -72,3 +72,17 @@ C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.cs
 C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.csproj.CopyComplete
 C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.exe
 C:\Users\u101040.DESHALIT\Desktop\Uno\Taki_lala\Taki_lala\obj\Debug\Taki_lala.pdb
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.dll
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.Modules.dll
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.SQLite.dll
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.Wpf.dll
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.xml
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.Modules.xml
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.SQLite.xml
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\IronPython.Wpf.xml
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.xml
+C:\Users\Tomer\Desktop\Uno\Taki_lala\Taki_lala\bin\Debug\Microsoft.Scripting.Metadata.xml
