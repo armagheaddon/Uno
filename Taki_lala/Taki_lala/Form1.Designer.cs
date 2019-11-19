@@ -674,7 +674,7 @@
             this.plustwoyellow.Image = ((System.Drawing.Image)(resources.GetObject("plustwoyellow.Image")));
             this.plustwoyellow.Location = new System.Drawing.Point(458, 280);
             this.plustwoyellow.Name = "plustwoyellow";
-            this.plustwoyellow.Size = new System.Drawing.Size(100, 50);
+            this.plustwoyellow.Size = new System.Drawing.Size(100, 150);
             this.plustwoyellow.TabIndex = 47;
             this.plustwoyellow.TabStop = false;
             // 

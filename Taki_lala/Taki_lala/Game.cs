@@ -33,16 +33,23 @@ namespace Taki_lala
 
             this.history = new List<Dictionary<string, dynamic>>();
             IronPythonSetUp();
-            runGameLoop();
-
+            try
+            {
+                runGameLoop();
+                throw new ArgumentException();
+            }
+            catch
+            {
+                RunGraphics();
+            }
         }
-       
+
         public void IronPythonSetUp()
         {
             Console.WriteLine("iron python setup");
             engine = Python.CreateEngine();     // Extract Python language engine from their grasp
             scope = engine.CreateScope();       // Introduce Python namespace (scope)
-            source = engine.CreateScriptSourceFromFile("C:/Users/dooda/OneDrive/שולחן העבודה/Uno/bot_taki.py"); // Load the script. TODO: ADD PATH
+            source = engine.CreateScriptSourceFromFile("C:/Users/u101040.DESHALIT/Desktop/Uno/bot_taki.py"); // Load the script. TODO: ADD PATH
             source.Execute(scope);
             calcTurn = scope.GetVariable("turn");
             //scope.SetVariable("params", d);         // This will be the name of the dictionary in python script
@@ -58,6 +65,10 @@ namespace Taki_lala
 
             while(gameState != null)
             {
+                if(history.Count == 10)
+                {
+                    break;
+                }
                 if (gameState.ContainsKey("command"))
                 {
                     Console.WriteLine(gameState["command"]);
@@ -66,20 +77,16 @@ namespace Taki_lala
                 else
                 {
                     if (gameState.ContainsKey("error"))
-                        throw new ArgumentException(gameState["error"] + " " + history[history.Count - 1]["pile_color"]);
+                        Console.WriteLine(gameState["error"] + " " + history[history.Count - 1]["pile_color"]);
                     else
                     {
                         history.Add(gameState);
-
-                        if(history.Count == 15)
-                        {
-                            break;
-                        }
 
                         Console.WriteLine(gameState["turn"] + "'s turn");
                         if (gameState["turn"] == myID)
                         {
                             Console.WriteLine("my turn!!!!!!!!!!!");
+
                             vars = calcVars(gameState);
                             myAction = calcTurn(vars[0], vars[1], vars[2], vars[3], vars[4], vars[5]);
                             Console.WriteLine("calculated Action");
@@ -109,13 +116,13 @@ namespace Taki_lala
                                     }
                                 }
                             }
+
                             Console.WriteLine("");
                         }
                     }
                 }
                 gameState = client.GetIncoming();
             }
-            RunGraphics();
         }
 
         public List<dynamic> calcVars(dynamic gameState)

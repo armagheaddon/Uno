@@ -14,14 +14,17 @@ namespace Taki_lala
     public partial class Form1 : Form
     {
         private int counter = 0;
-        public Form1(dynamic history)
+        private PictureBox[] pictures;
+        private dynamic history;
+        public Form1(dynamic hist)
         {
+            history = hist;
             InitializeComponent();
             Console.WriteLine(onered.Name);
             Console.WriteLine(threered.Name);
             Console.WriteLine(twored.Name);
 
-            PictureBox[] pictures = new PictureBox[58];
+            pictures = new PictureBox[58];
             pictures[0] = oneblue;
             pictures[1] = twoblue;
             pictures[2] = threeblue;
@@ -167,243 +170,61 @@ namespace Taki_lala
 
 
 
-            foreach (Dictionary<string, dynamic> turn in game)
-            {
-                for (int h = 0; h < pictures.Length; h++)
-                {
-                    this.Controls.Remove(pictures[h]);
-                }
 
-                Dictionary<string, dynamic> pileC = new Dictionary<string, dynamic>();
-                List<KeyValuePair<string, dynamic>> hand = new List<KeyValuePair<string, dynamic>>(); //  guess it works
-
-                // pile card
-                pileC = turn["pile"];
-                var c = pileC.First();
-                string str;
-                string cur_pile = c.Key + c.Value;
-                Console.WriteLine(cur_pile);
-                if (c.Key == "1")
-                    cur_pile = "one" + c.Value;
-                if (c.Key == "2")
-                    cur_pile = "two" + c.Value;
-                if (c.Key == "3")
-                    cur_pile = "three" + c.Value;
-                if (c.Key == "4")
-                    cur_pile = "four" + c.Value;
-                if (c.Key == "5")
-                    cur_pile = "five" + c.Value;
-                if (c.Key == "6")
-                    cur_pile = "six" + c.Value;
-                if (c.Key == "7")
-                    cur_pile = "seven" + c.Value;
-                if (c.Key == "8")
-                    cur_pile = "eight" + c.Value;
-                if (c.Key == "9")
-                    cur_pile = "nine" + c.Value;
-                if (c.Key == "+")
-                    cur_pile = "plus" + c.Value;
-                if (c.Key == "+2")
-                    cur_pile = "plustwo" + c.Value;
-                if (c.Key == "ALL")
-                    cur_pile = "all" + c.Value;
-                if (c.Key == "CHOCOL")
-                    cur_pile = "chacol" + c.Value;
-                if (c.Key == "CHDIR")
-                    cur_pile = "chadir" + c.Value;
-                if (c.Key == "TAKI")
-                    cur_pile = "taki" + c.Value;
-                if (c.Key == "STOP")
-                    cur_pile = "stop" + c.Value;
-
-
-                //the turn dir
-                int turn_dir = turn["turn_dir"];
-
-                //others cards
-                List<int> others = new List<int>();
-                others = turn["others"];
-                first_player.Text = others[1].ToString();
-                second_player.Text = others[2].ToString();
-                third_player.Text = others[3].ToString();
-                if (turn_dir == 1)
-                {
-                    this.Controls.Remove(right);
-                    this.Controls.Add(left);
-                }
-                if (turn_dir == -1)
-                {
-                    this.Controls.Remove(left);
-                    this.Controls.Add(right);
-                }
-
-
-
-                // our cards
-                List<Dictionary<string, dynamic>> OurHand = turn["hand"];
-
-
-
-                //550- the middle of the x lenght, 610- almost in the botttom of the screen
-                // we are taking from the middle few steps backwards in order to have half of the cards before the middle 
-                // and the other half after....
-
-                int hand_len = OurHand.Count;
-                Console.WriteLine(hand_len);
-                int x_start = 450 - 100 * hand_len / 2;
-                int x = x_start;
-                int y_start = 510;
-
-                for (int j = 0; j < hand_len; j++)
-                {
-                    if (j == 8)
-                    {
-                        x = 450 - 100 * hand_len / 2;
-                        Console.WriteLine(x_start);
-                        y_start = y_start - 155;
-                        Console.WriteLine(y_start);
-                    }
-
-                    var item = OurHand[j].First();
-                    string value = item.Key;//value
-                    string key = item.Value;//color
-                                            //matching strings
-
-                    string pic = value + key;/// needed to asjust to our words...
-                    if (item.Key == "1")
-                        pic = "one" + key;
-                    if (item.Key == "2")
-                        pic = "two" + key;
-                    if (item.Key == "3")
-                        pic = "three" + key;
-                    if (item.Key == "4")
-                        pic = "four" + key;
-                    if (item.Key == "5")
-                        pic = "five" + key;
-                    if (item.Key == "6")
-                        pic = "six" + key;
-                    if (item.Key == "7")
-                        pic = "seven" + key;
-                    if (item.Key == "8")
-                        pic = "eight" + key;
-                    if (item.Key == "9")
-                        pic = "nine" + key;
-                    if (item.Key == "+")
-                        pic = "plus" + key;
-                    if (item.Key == "+2")
-                        pic = "plustwo" + key;
-                    if (item.Key == "ALL")
-                        pic = "all" + key;
-                    if (item.Key == "CHOCOL")
-                        pic = "chacol" + key;
-                    if (item.Key == "CHDIR")
-                        pic = "chadir" + key;
-                    if (item.Key == "TAkI")
-                        pic = "taki" + key;
-                    if (item.Key == "STOP")
-                        pic = "stop" + key;
-                    //int counter = 0;
-                    x = x + 105;
-
-
-
-                    for (int k = 0; k < pictures.Length; k++)
-                    {
-
-                        // finding the needed picture
-                        if (pic == pictures[k].Name)
-                        {
-                            pictures[k].Location = new System.Drawing.Point(x, y_start);
-                            this.Controls.Add(pictures[k]);
-                        }
-
-                        //pile card
-                        if (cur_pile == pictures[k].Name)
-                        {
-                            pictures[k].Location = new System.Drawing.Point(525, 140);
-                            this.Controls.Add(pictures[k]);
-                        }
-                    }
-
-
-
-
-                    /*     
-                     int counter = 1;
-
-                     System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
-                     timer1.Interval = 7000;//5 minutes
-                     timer1.Tick += (sender, args) => timer1_Tick(sender, args,game,counter,pictures);
-                     timer1.Start();
-                     RefreshMyForm(game, counter, pictures);
-                     */
-
-
-
-
-                }
-                System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-                timer.Interval = 2000;
-                timer.Tick += new EventHandler(timer_Tick);
-                timer.Enabled = true;
-                timer.Start();
-                Console.WriteLine("hello");
-                this.button1.Click += (sender, args) => button1_Click(sender, args, history, pictures);
-            }
-        }
-
-
-
-
-        public object hand { get; }
-
-
-        public void turn(List<Dictionary<string, dynamic>> game, PictureBox[] pictures)
-        {
             for (int h = 0; h < pictures.Length; h++)
             {
                 this.Controls.Remove(pictures[h]);
             }
 
-            Dictionary<string, dynamic> pileC = new Dictionary<string, dynamic>();
+            dynamic pileC;
             List<KeyValuePair<string, dynamic>> hand = new List<KeyValuePair<string, dynamic>>(); //  guess it works
 
             // pile card
-            pileC = game[counter]["pile"];
-            var c = pileC.First();
+            pileC = history[0]["pile"];
+            var c = pileC;
             string str;
-            string cur_pile = c.Key + c.Value;
+            string cur_pile = c["value"] + c["color"];
             Console.WriteLine(cur_pile);
-            if (c.Key == "1")
-                cur_pile = "one" + c.Value;
-            if (c.Key == "2")
-                cur_pile = "two" + c.Value;
-            if (c.Key == "3")
-                cur_pile = "three" + c.Value;
-            if (c.Key == "4")
-                cur_pile = "four" + c.Value;
-            if (c.Key == "5")
-                cur_pile = "five" + c.Value;
-            if (c.Key == "6")
-                cur_pile = "six" + c.Value;
-            if (c.Key == "7")
-                cur_pile = "seven" + c.Value;
-            if (c.Key == "8")
-                cur_pile = "eight" + c.Value;
-            if (c.Key == "9")
-                cur_pile = "nine" + c.Value;
-            if (c.Key == "+")
-                cur_pile = "plus" + c.Value;
-            if (c.Key == "+2")
-                cur_pile = "plustwo" + c.Value;
+            if (c["value"] == "1")
+                cur_pile = "one" + c["color"];
+            if (c["value"] == "2")
+                cur_pile = "two" + c["color"];
+            if (c["value"] == "3")
+                cur_pile = "three" + c["color"];
+            if (c["value"] == "4")
+                cur_pile = "four" + c["color"];
+            if (c["value"] == "5")
+                cur_pile = "five" + c["color"];
+            if (c["value"] == "6")
+                cur_pile = "six" + c["color"];
+            if (c["value"] == "7")
+                cur_pile = "seven" + c["color"];
+            if (c["value"] == "8")
+                cur_pile = "eight" + c["color"];
+            if (c["value"] == "9")
+                cur_pile = "nine" + c["color"];
+            if (c["value"] == "+")
+                cur_pile = "plus" + c["color"];
+            if (c["value"] == "+2")
+                cur_pile = "plustwo" + c["color"];
+            if (c["value"] == "ALL")
+                cur_pile = "all" + c["color"];
+            if (c["value"] == "CHOCOL")
+                cur_pile = "chacol" + c["color"];
+            if (c["value"] == "CHDIR")
+                cur_pile = "chadir" + c["color"];
+            if (c["value"] == "TAKI")
+                cur_pile = "taki" + c["color"];
+            if (c["value"] == "STOP")
+                cur_pile = "stop" + c["color"];
 
 
             //the turn dir
-            int turn_dir = game[counter]["turn_dir"];
+            dynamic turn_dir = history[0]["turn_dir"];
 
             //others cards
-            List<int> others = new List<int>();
-            others = game[counter]["others"];
+            dynamic others;
+            others = history[0]["others"];
             first_player.Text = others[1].ToString();
             second_player.Text = others[2].ToString();
             third_player.Text = others[3].ToString();
@@ -421,7 +242,7 @@ namespace Taki_lala
 
 
             // our cards
-            List<Dictionary<string, dynamic>> OurHand = game[counter]["hand"];
+            dynamic OurHand = history[0]["hand"];
 
 
 
@@ -445,34 +266,236 @@ namespace Taki_lala
                     Console.WriteLine(y_start);
                 }
 
-                var item = OurHand[j].First();
-                string value = item.Key;//value
-                string key = item.Value;//color
+                var item = OurHand[j];
+                string value = item["value"];//value
+                string key = item["color"];//color
                                         //matching strings
 
                 string pic = value + key;/// needed to asjust to our words...
-                if (item.Key == "1")
+                if (value == "1")
                     pic = "one" + key;
-                if (item.Key == "2")
+                if (value == "2")
                     pic = "two" + key;
-                if (item.Key == "3")
+                if (value == "3")
                     pic = "three" + key;
-                if (item.Key == "4")
+                if (value == "4")
                     pic = "four" + key;
-                if (item.Key == "5")
+                if (value == "5")
                     pic = "five" + key;
-                if (item.Key == "6")
+                if (value == "6")
                     pic = "six" + key;
-                if (item.Key == "7")
+                if (value == "7")
                     pic = "seven" + key;
-                if (item.Key == "8")
+                if (value == "8")
                     pic = "eight" + key;
-                if (item.Key == "9")
+                if (value == "9")
                     pic = "nine" + key;
-                if (item.Key == "+")
+                if (value == "+")
                     pic = "plus" + key;
-                if (item.Key == "+2")
+                if (value == "+2")
                     pic = "plustwo" + key;
+                if (value == "ALL")
+                    pic = "all" + key;
+                if (value == "CHOCOL")
+                    pic = "chacol" + key;
+                if (value == "CHDIR")
+                    pic = "chadir" + key;
+                if (value == "TAkI")
+                    pic = "taki" + key;
+                if (value == "STOP")
+                    pic = "stop" + key;
+                //int counter = 0;
+                x = x + 105;
+
+
+
+                for (int k = 0; k < pictures.Length; k++)
+                {
+
+                    // finding the needed picture
+                    if (pic == pictures[k].Name)
+                    {
+                        pictures[k].Location = new Point(x, y_start);
+                        this.Controls.Add(pictures[k]);
+                    }
+
+                    //pile card
+                    if (cur_pile == pictures[k].Name)
+                    {
+                        pictures[k].Location = new Point(525, 140);
+                        this.Controls.Add(pictures[k]);
+                    }
+                }
+
+
+
+
+                /*     
+                 int counter = 1;
+
+                 System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
+                 timer1.Interval = 7000;//5 minutes
+                 timer1.Tick += (sender, args) => timer1_Tick(sender, args,game,counter,pictures);
+                 timer1.Start();
+                 RefreshMyForm(game, counter, pictures);
+                 */
+
+
+
+
+            }
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            timer.Interval = 2000;
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Enabled = true;
+            timer.Start();
+            Console.WriteLine("hello");
+            this.button1.Click += (sender, args) => button1_Click(sender, args);
+        }
+        
+
+
+
+
+        public object hand { get; }
+
+
+        public void turn(List<Dictionary<string, dynamic>> game, PictureBox[] pictures)
+        {
+            for (int h = 0; h < pictures.Length; h++)
+            {
+                this.Controls.Remove(pictures[h]);
+            }
+
+            dynamic pileC;
+            List<KeyValuePair<string, dynamic>> hand = new List<KeyValuePair<string, dynamic>>(); //  guess it works
+
+            // pile card
+            pileC = game[counter]["pile"];
+            var c = pileC;
+            string str;
+            string cur_pile = c["value"] + c["color"];
+            Console.WriteLine(cur_pile);
+            if (c["value"] == "1")
+                cur_pile = "one" + c["color"];
+            if (c["value"] == "2")
+                cur_pile = "two" + c["color"];
+            if (c["value"] == "3")
+                cur_pile = "three" + c["color"];
+            if (c["value"] == "4")
+                cur_pile = "four" + c["color"];
+            if (c["value"] == "5")
+                cur_pile = "five" + c["color"];
+            if (c["value"] == "6")
+                cur_pile = "six" + c["color"];
+            if (c["value"] == "7")
+                cur_pile = "seven" + c["color"];
+            if (c["value"] == "8")
+                cur_pile = "eight" + c["color"];
+            if (c["value"] == "9")
+                cur_pile = "nine" + c["color"];
+            if (c["value"] == "+")
+                cur_pile = "plus" + c["color"];
+            if (c["value"] == "+2")
+                cur_pile = "plustwo" + c["color"];
+            if (c["value"] == "ALL")
+                cur_pile = "all" + c["color"];
+            if (c["value"] == "CHOCOL")
+                cur_pile = "chacol" + c["color"];
+            if (c["value"] == "CHDIR")
+                cur_pile = "chadir" + c["color"];
+            if (c["value"] == "TAKI")
+                cur_pile = "taki" + c["color"];
+            if (c["value"] == "STOP")
+                cur_pile = "stop" + c["color"];
+
+
+
+            //the turn dir
+            dynamic turn_dir = game[counter]["turn_dir"];
+
+            //others cards
+            dynamic others;
+            others = game[counter]["others"];
+            first_player.Text = others[1].ToString();
+            second_player.Text = others[2].ToString();
+            third_player.Text = others[3].ToString();
+            if (turn_dir == 1)
+            {
+                this.Controls.Remove(right);
+                this.Controls.Add(left);
+            }
+            if (turn_dir == -1)
+            {
+                this.Controls.Remove(left);
+                this.Controls.Add(right);
+            }
+
+
+
+            // our cards
+            dynamic OurHand = game[counter]["hand"];
+
+
+
+            //550- the middle of the x lenght, 610- almost in the botttom of the screen
+            // we are taking from the middle few steps backwards in order to have half of the cards before the middle 
+            // and the other half after....
+
+            int hand_len = OurHand.Count;
+            Console.WriteLine(hand_len);
+            int x_start = 450 - 100 * hand_len / 2;
+            int x = x_start;
+            int y_start = 510;
+
+            for (int j = 0; j < hand_len; j++)
+            {
+                if (j == 8)
+                {
+                    x = 450 - 100 * hand_len / 2;
+                    Console.WriteLine(x_start);
+                    y_start = y_start - 155;
+                    Console.WriteLine(y_start);
+                }
+
+                var item = OurHand[j];
+                string value = item["value"];//value
+                string key = item["color"];//color
+                                           //matching strings
+
+                string pic = value + key;/// needed to asjust to our words...
+                if (value == "1")
+                    pic = "one" + key;
+                if (value == "2")
+                    pic = "two" + key;
+                if (value == "3")
+                    pic = "three" + key;
+                if (value == "4")
+                    pic = "four" + key;
+                if (value == "5")
+                    pic = "five" + key;
+                if (value == "6")
+                    pic = "six" + key;
+                if (value == "7")
+                    pic = "seven" + key;
+                if (value == "8")
+                    pic = "eight" + key;
+                if (value == "9")
+                    pic = "nine" + key;
+                if (value == "+")
+                    pic = "plus" + key;
+                if (value == "+2")
+                    pic = "plustwo" + key;
+                if (value == "ALL")
+                    pic = "all" + key;
+                if (value == "CHOCOL")
+                    pic = "chacol" + key;
+                if (value == "CHDIR")
+                    pic = "chadir" + key;
+                if (value == "TAkI")
+                    pic = "taki" + key;
+                if (value == "STOP")
+                    pic = "stop" + key;
                 //int counter = 0;
                 x = x + 105;
 
@@ -509,16 +532,17 @@ namespace Taki_lala
             button1.PerformClick();
             Console.WriteLine("ok");
         }
-        private void button1_Click(object sender, EventArgs e, List<Dictionary<string, dynamic>> game, PictureBox[] pictures)
+        private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 counter++;
-                turn(game, pictures);
+                turn(history, pictures);
             }
-            catch
+            catch (Exception er)
             {
-                Console.WriteLine("out of index");
+                Console.WriteLine(er.ToString());
+                Console.WriteLine("Index out of range");
             }
 
 
