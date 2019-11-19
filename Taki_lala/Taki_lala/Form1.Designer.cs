@@ -93,6 +93,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.left = new System.Windows.Forms.PictureBox();
             this.right = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.onered)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.twored)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.threered)).BeginInit();
@@ -684,10 +685,9 @@
             this.first_player.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.first_player.ForeColor = System.Drawing.SystemColors.ControlText;
             this.first_player.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.first_player.Location = new System.Drawing.Point(1661, 422);
-            this.first_player.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.first_player.Location = new System.Drawing.Point(906, 229);
             this.first_player.Name = "first_player";
-            this.first_player.Size = new System.Drawing.Size(334, 205);
+            this.first_player.Size = new System.Drawing.Size(182, 111);
             this.first_player.TabIndex = 0;
             this.first_player.Text = "0";
             this.first_player.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -697,10 +697,9 @@
             this.second_player.BackColor = System.Drawing.SystemColors.Info;
             this.second_player.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.second_player.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.second_player.Location = new System.Drawing.Point(891, 41);
-            this.second_player.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.second_player.Location = new System.Drawing.Point(486, 22);
             this.second_player.Name = "second_player";
-            this.second_player.Size = new System.Drawing.Size(332, 205);
+            this.second_player.Size = new System.Drawing.Size(181, 111);
             this.second_player.TabIndex = 1;
             this.second_player.Text = "0";
             this.second_player.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -710,10 +709,9 @@
             this.third_player.BackColor = System.Drawing.SystemColors.Info;
             this.third_player.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.third_player.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.third_player.Location = new System.Drawing.Point(120, 422);
-            this.third_player.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.third_player.Location = new System.Drawing.Point(65, 229);
             this.third_player.Name = "third_player";
-            this.third_player.Size = new System.Drawing.Size(334, 205);
+            this.third_player.Size = new System.Drawing.Size(182, 111);
             this.third_player.TabIndex = 2;
             this.third_player.Text = "0";
             this.third_player.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -721,10 +719,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(814, 391);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
+            this.panel1.Location = new System.Drawing.Point(444, 212);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(480, 404);
+            this.panel1.Size = new System.Drawing.Size(262, 219);
             this.panel1.TabIndex = 4;
             this.panel1.Visible = false;
             // 
@@ -746,17 +743,27 @@
             this.right.TabIndex = 6;
             this.right.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(960, 64);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 52);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "next";
+            this.button1.UseVisualStyleBackColor = true;
+            // this.button1.Click += new System.EventHandler(this.button1_Click());
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(2151, 2036);
+            this.ClientSize = new System.Drawing.Size(1134, 661);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.third_player);
             this.Controls.Add(this.second_player);
             this.Controls.Add(this.first_player);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.onered)).EndInit();
@@ -889,5 +896,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox left;
         private System.Windows.Forms.PictureBox right;
+        private System.Windows.Forms.Button button1;
     }
 }
+

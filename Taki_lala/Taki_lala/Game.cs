@@ -73,8 +73,7 @@ namespace Taki_lala
 
                         if(history.Count == 15)
                         {
-                            var a = history;
-                            throw new ArgumentException();
+                            break;
                         }
 
                         Console.WriteLine(gameState["turn"] + "'s turn");
