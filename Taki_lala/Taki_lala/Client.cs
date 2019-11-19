@@ -22,7 +22,7 @@ namespace Taki_lala
             try
             {
                 // Establish the remote endpoint for the socket.  
-                IPAddress ipAddress = IPAddress.Parse("192.168.1.146");       // Server IP
+                IPAddress ipAddress = IPAddress.Parse("10.0.0.13");       // Server IP
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, 50000); // Server address
 
                 // Create a TCP/IP  socket.  
@@ -59,7 +59,9 @@ namespace Taki_lala
             {
                 DoNothing();
             }
-            return incoming.Dequeue();
+            var msg = incoming.Dequeue();
+            Console.WriteLine("incoming: "+msg);
+            return msg;
         }
 
         public void ReceiveLoop()
@@ -90,6 +92,7 @@ namespace Taki_lala
 
                 singleMsg = newmsg.Substring(0, length);
                 dict = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(singleMsg);
+                Console.WriteLine("added to incoming: "+dict);
                 incoming.Enqueue(dict);
                 newmsg = newmsg.Substring(length);
             }
@@ -135,13 +138,12 @@ namespace Taki_lala
 
         public void Send(dynamic card, string order)
         {
-            Dictionary<string, string> turnDict = new Dictionary<string, string>();
+            Dictionary<string, dynamic> turnDict = new Dictionary<string, dynamic>();
+            turnDict.Add("card", card);
             turnDict.Add("order", order);
-            turnDict.Add("card", JsonConvert.SerializeObject(card));
-
+            Console.WriteLine("sent: "+JsonConvert.SerializeObject(turnDict));
             // Encode the data string into a byte array.  
             byte[] msg = Encoding.ASCII.GetBytes(JsonConvert.SerializeObject(turnDict));
-
             // Send the data through the socket.  
             client.Send(msg);
         }

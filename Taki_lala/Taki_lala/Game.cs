@@ -42,7 +42,7 @@ namespace Taki_lala
             Console.WriteLine("iron python setup");
             engine = Python.CreateEngine();     // Extract Python language engine from their grasp
             scope = engine.CreateScope();       // Introduce Python namespace (scope)
-            source = engine.CreateScriptSourceFromFile("C:/Users/Tomer/Desktop/Uno/bot_taki.py"); // Load the script. TODO: ADD PATH
+            source = engine.CreateScriptSourceFromFile("C:/Users/dooda/OneDrive/שולחן העבודה/Uno/bot_taki.py"); // Load the script. TODO: ADD PATH
             source.Execute(scope);
             calcTurn = scope.GetVariable("turn");
             //scope.SetVariable("params", d);         // This will be the name of the dictionary in python script
@@ -58,35 +58,61 @@ namespace Taki_lala
 
             while(gameState != null)
             {
-                history.Add(gameState);
-                Console.WriteLine(gameState["turn"] + "'s turn");
-                if (gameState["turn"] == myID)
+                if (gameState.ContainsKey("command"))
                 {
-                    Console.WriteLine("my turn!!!!!!!!!!!");
-                    vars = calcVars(gameState);
-                    myAction = calcTurn(vars[0], vars[1], vars[2], vars[3], vars[4], vars[5]);
-                    Console.WriteLine("Action - "+myAction);
-                    for (int i = 0; i < myAction[0].Count; i++)
+                    Console.WriteLine(gameState["command"]);
+                    break;
+                }
+                else
+                {
+                    if (gameState.ContainsKey("error"))
+                        throw new ArgumentException(gameState["error"] + " " + history[history.Count - 1]["pile_color"]);
+                    else
                     {
-                        if(i == myAction[0].Count - 1)
+                        history.Add(gameState);
+
+                        if(history.Count == 15)
                         {
-                            if(myAction[1] == "draw card")
+                            var a = history;
+                            throw new ArgumentException();
+                        }
+
+                        Console.WriteLine(gameState["turn"] + "'s turn");
+                        if (gameState["turn"] == myID)
+                        {
+                            Console.WriteLine("my turn!!!!!!!!!!!");
+                            vars = calcVars(gameState);
+                            myAction = calcTurn(vars[0], vars[1], vars[2], vars[3], vars[4], vars[5]);
+                            Console.WriteLine("calculated Action");
+                            if (myAction[0].Count == 0 && myAction[1] == "draw card")
                             {
                                 var card = new Dictionary<string, dynamic>();
                                 card.Add("color", "");
-                                card.Add("card", "");
+                                card.Add("value", "");
+                                Console.WriteLine("Sent 'draw card'");
                                 client.Send(card, myAction[1]);
                             }
                             else
-                                client.Send(myAction[0][i], myAction[1]);
-                        }
-                        else
-                            client.Send(myAction[0][i], "");
+                            {
+                                for (int i = 0; i < myAction[0].Count; i++)
+                                {
+                                    if (i == myAction[0].Count - 1)
+                                        client.Send(myAction[0][i], myAction[1]);
+                                    else
+                                    {
+                                        client.Send(myAction[0][i], "");
 
-                        gameState = client.GetIncoming();
-                        history.Add(gameState);
+                                        gameState = client.GetIncoming();
+                                        if (gameState.ContainsKey("error"))
+                                            throw new ArgumentException(gameState["error"] + " " + history[history.Count - 1]["pile_color"]);
+                                        else
+                                            history.Add(gameState);
+                                    }
+                                }
+                            }
+                            Console.WriteLine("");
+                        }
                     }
-                    Console.WriteLine("");
                 }
                 gameState = client.GetIncoming();
             }
@@ -112,7 +138,7 @@ namespace Taki_lala
             else
             {
                 var lastTurn = history[history.Count - 2];
-                vars.Add(amountOfCards(lastTurn["turn"], lastTurn["others"], 1, -lastTurn["turn_dir"]));
+                vars.Add(amountOfCards(lastTurn["turn"], lastTurn["others"], 0, -lastTurn["turn_dir"]));
             }
             return vars;
         }
